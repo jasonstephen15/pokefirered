@@ -82,3 +82,11 @@ jobs:
         run: |
           make -j${nproc} all
 
+      - name: Upload ROMs
+        uses: actions/upload-artifact@v4
+        with:
+          name: roms
+          path: |
+            pokefirered.gba
+            pokeleafgreen.gba
+          retention-days: 30
