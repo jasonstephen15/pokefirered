@@ -396,18 +396,18 @@ static const u16 sPayoutTable[] = {
 };
 
 #if defined(FIRERED)
-static const u16 sReelIcons_Pal[][16] = INCBIN_U16("graphics/slot_machine/firered/reel_icons.gbapal");
-static const u32 sReelIcons_Tiles[]   = INCBIN_U32("graphics/slot_machine/firered/reel_icons.4bpp.lz");
-static const u16 sClefairy_Pal[]      = INCBIN_U16("graphics/slot_machine/firered/clefairy.gbapal");
-static const u32 sClefairy_Tiles[]    = INCBIN_U32("graphics/slot_machine/firered/clefairy.4bpp.lz");
+static const u16 sReelIcons_Pal[][16] = INCBIN_U16("assets/graphics.bin", 0x264F18, 0xA0);
+static const u32 sReelIcons_Tiles[]   = INCBIN_U32("assets/graphics.bin", 0x264FB8, 0x638);
+static const u16 sClefairy_Pal[]      = INCBIN_U16("assets/graphics.bin", 0x2655F0, 0x20);
+static const u32 sClefairy_Tiles[]    = INCBIN_U32("assets/graphics.bin", 0x265610, 0x4B8);
 #elif defined(LEAFGREEN)
-static const u16 sReelIcons_Pal[][16] = INCBIN_U16("graphics/slot_machine/leafgreen/reel_icons.gbapal");
-static const u32 sReelIcons_Tiles[]   = INCBIN_U32("graphics/slot_machine/leafgreen/reel_icons.4bpp.lz");
-static const u16 sClefairy_Pal[]      = INCBIN_U16("graphics/slot_machine/leafgreen/clefairy.gbapal");
-static const u32 sClefairy_Tiles[]    = INCBIN_U32("graphics/slot_machine/leafgreen/clefairy.4bpp.lz");
+static const u16 sReelIcons_Pal[][16] = INCBIN_U16("assets/graphics.bin", 0x265AC8, 0xA0);
+static const u32 sReelIcons_Tiles[]   = INCBIN_U32("assets/graphics.bin", 0x265B68, 0x5E8);
+static const u16 sClefairy_Pal[]      = INCBIN_U16("assets/graphics.bin", 0x266150, 0x20);
+static const u32 sClefairy_Tiles[]    = INCBIN_U32("assets/graphics.bin", 0x266170, 0x474);
 #endif
-static const u16 sDigits_Pal[]        = INCBIN_U16("graphics/slot_machine/digits.gbapal");
-static const u32 sDigits_Tiles[]      = INCBIN_U32("graphics/slot_machine/digits.4bpp.lz");
+static const u16 sDigits_Pal[]        = INCBIN_U16("assets/graphics.bin", 0x2665E4, 0x20);
+static const u32 sDigits_Tiles[]      = INCBIN_U32("assets/graphics.bin", 0x266604, 0x6C);
 
 static const struct CompressedSpriteSheet sSpriteSheets[] = {
     {.data = sReelIcons_Tiles, .size = 0xe00, .tag = GFXTAG_REEL_ICONS},
@@ -736,25 +736,25 @@ bool8 (*const sSlotMachineSetupTasks[])(u8 *, struct SlotMachineSetupTaskData *)
 };
 
 #if defined(FIRERED)
-static const u16 sBg_Pal[][16]             = INCBIN_U16("graphics/slot_machine/firered/bg.gbapal");
-static const u32 sBg_Tiles[]               = INCBIN_U32("graphics/slot_machine/firered/bg.4bpp.lz");
-static const u32 sBg_Tilemap[]             = INCBIN_U32("graphics/slot_machine/firered/bg.bin.lz");
-static const u16 sBgPal_MatchLines[]       = INCBIN_U16("graphics/slot_machine/firered/match_lines.gbapal");
-static const u16 sBgPal_PayoutLight[][16]  = INCBIN_U16("graphics/slot_machine/firered/payout_lights.gbapal");
-static const u32 sButtonPressed_Tiles[]    = INCBIN_U32("graphics/slot_machine/firered/button_pressed.4bpp.lz");
-static const u16 sCombosWindow_Pal[]       = INCBIN_U16("graphics/slot_machine/firered/combos_window.gbapal");
-static const u32 sCombosWindow_Tiles[]     = INCBIN_U32("graphics/slot_machine/firered/combos_window.4bpp.lz");
-static const u32 sCombosWindow_Tilemap[]   = INCBIN_U32("graphics/slot_machine/firered/combos_window.bin.lz");
+static const u16 sBg_Pal[][16]             = INCBIN_U16("assets/graphics.bin", 0x266670, 0xA0);
+static const u32 sBg_Tiles[]               = INCBIN_U32("assets/graphics.bin", 0x266710, 0x804);
+static const u32 sBg_Tilemap[]             = INCBIN_U32("assets/graphics.bin", 0x266F14, 0x2E8);
+static const u16 sBgPal_MatchLines[]       = INCBIN_U16("assets/graphics.bin", 0x2671FC, 0x20);
+static const u16 sBgPal_PayoutLight[][16]  = INCBIN_U16("assets/graphics.bin", 0x26721C, 0x60);
+static const u32 sButtonPressed_Tiles[]    = INCBIN_U32("assets/graphics.bin", 0x26727C, 0x84);
+static const u16 sCombosWindow_Pal[]       = INCBIN_U16("assets/graphics.bin", 0x267300, 0x60);
+static const u32 sCombosWindow_Tiles[]     = INCBIN_U32("assets/graphics.bin", 0x267360, 0x378);
+static const u32 sCombosWindow_Tilemap[]   = INCBIN_U32("assets/graphics.bin", 0x2676D8, 0x178);
 #elif defined(LEAFGREEN)
-static const u16 sBg_Pal[][16]             = INCBIN_U16("graphics/slot_machine/leafgreen/bg.gbapal");
-static const u32 sBg_Tiles[]               = INCBIN_U32("graphics/slot_machine/leafgreen/bg.4bpp.lz");
-static const u32 sBg_Tilemap[]             = INCBIN_U32("graphics/slot_machine/leafgreen/bg.bin.lz");
-static const u16 sBgPal_MatchLines[]       = INCBIN_U16("graphics/slot_machine/leafgreen/match_lines.gbapal");
-static const u16 sBgPal_PayoutLight[][16]  = INCBIN_U16("graphics/slot_machine/leafgreen/payout_lights.gbapal");
-static const u32 sButtonPressed_Tiles[]    = INCBIN_U32("graphics/slot_machine/leafgreen/button_pressed.4bpp.lz");
-static const u16 sCombosWindow_Pal[]       = INCBIN_U16("graphics/slot_machine/leafgreen/combos_window.gbapal");
-static const u32 sCombosWindow_Tiles[]     = INCBIN_U32("graphics/slot_machine/leafgreen/combos_window.4bpp.lz");
-static const u32 sCombosWindow_Tilemap[]   = INCBIN_U32("graphics/slot_machine/leafgreen/combos_window.bin.lz");
+static const u16 sBg_Pal[][16]             = INCBIN_U16("assets/graphics.bin", 0x267850, 0xA0);
+static const u32 sBg_Tiles[]               = INCBIN_U32("assets/graphics.bin", 0x2678F0, 0x75C);
+static const u32 sBg_Tilemap[]             = INCBIN_U32("assets/graphics.bin", 0x26804C, 0x2E4);
+static const u16 sBgPal_MatchLines[]       = INCBIN_U16("assets/graphics.bin", 0x268330, 0x20);
+static const u16 sBgPal_PayoutLight[][16]  = INCBIN_U16("assets/graphics.bin", 0x268350, 0x60);
+static const u32 sButtonPressed_Tiles[]    = INCBIN_U32("assets/graphics.bin", 0x2683B0, 0x84);
+static const u16 sCombosWindow_Pal[]       = INCBIN_U16("assets/graphics.bin", 0x268434, 0x60);
+static const u32 sCombosWindow_Tiles[]     = INCBIN_U32("assets/graphics.bin", 0x268494, 0x378);
+static const u32 sCombosWindow_Tilemap[]   = INCBIN_U32("assets/graphics.bin", 0x26880C, 0x174);
 #endif
 
 static const struct BgTemplate sBgTemplates[] = {

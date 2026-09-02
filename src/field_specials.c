@@ -2079,30 +2079,30 @@ void DaisyMassageServices(void)
 }
 
 static const u16 sEliteFourLightingPalettes[][16] = {
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_0.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_1.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_2.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_3.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_4.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_5.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_6.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_7.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_8.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_9.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_10.gbapal"),
-    INCBIN_U16("graphics/field_specials/elite_four_lighting_11.gbapal")
+    INCBIN_U16("assets/graphics.bin", 0x67B24, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67B44, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67B64, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67B84, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67BA4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67BC4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67BE4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67C04, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67C24, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67C44, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67C64, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67C84, 0x20)
 };
 
 static const u16 sChampionRoomLightingPalettes[][16] = {
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_0.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_1.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_2.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_3.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_4.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_5.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_6.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_7.gbapal"),
-    INCBIN_U16("graphics/field_specials/champion_room_lighting_8.gbapal")
+    INCBIN_U16("assets/graphics.bin", 0x67CA4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67CC4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67CE4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67D04, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67D24, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67D44, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67D64, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67D84, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67DA4, 0x20)
 };
 
 static const u8 sEliteFourLightingTimers[] = {
@@ -2317,17 +2317,17 @@ void CutMoveOpenDottedHoleDoor(void)
 }
 
 static const u16 sDeoxysObjectPals[][16] = {
-    INCBIN_U16("graphics/field_specials/deoxys_rock_0.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_1.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_2.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_3.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_4.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_5.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_6.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_7.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_8.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_9.gbapal"),
-    INCBIN_U16("graphics/field_specials/deoxys_rock_10.gbapal")
+    INCBIN_U16("assets/graphics.bin", 0x67DC4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67DE4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67E04, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67E24, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67E44, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67E64, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67E84, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67EA4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67EC4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67EE4, 0x20),
+    INCBIN_U16("assets/graphics.bin", 0x67F04, 0x20)
 };
 
 static const u8 sDeoxysCoords[][2] = {

@@ -29,8 +29,8 @@ static void EvoTask_ShrinkOrExpandEvoSprites(u8 taskId);
 static void PreEvoInvisible_PostEvoVisible_KillTask(u8 taskId);
 static void PreEvoVisible_PostEvoInvisible_KillTask(u8 taskId);
 
-static const u16 sEvolutionSparklesPalData[] = INCBIN_U16("graphics/evolution_scene/sparkle.gbapal");
-static const u32 sEvolutionSparklesTileData[] = INCBIN_U32("graphics/evolution_scene/sparkle.4bpp.lz");
+static const u16 sEvolutionSparklesPalData[] = INCBIN_U16("assets/graphics.bin", 0x5DC94, 0x20);
+static const u32 sEvolutionSparklesTileData[] = INCBIN_U32("assets/graphics.bin", 0x5DCB4, 0x20);
 
 static const struct CompressedSpriteSheet sSpriteSheet_EvolutionSparkles[] = {
     { sEvolutionSparklesTileData, 0x20, 1001 },

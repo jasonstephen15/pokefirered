@@ -644,18 +644,18 @@ static const u32 sPressingSpeedConversionTable[] = {
       390625  //  0.390625
 };
 
-static const u16 sBerryCrushCorePal[] = INCBIN_U16("graphics/berry_crush/crusher_base.gbapal");
-static const u16 sBerryCrushImpactAndSparklesPal[] = INCBIN_U16("graphics/berry_crush/impact.gbapal");
-static const u16 sBerryCrushTimerPal[] = INCBIN_U16("graphics/berry_crush/timer_digits.gbapal");
+static const u16 sBerryCrushCorePal[] = INCBIN_U16("assets/graphics.bin", 0xAE8C, 0x20);
+static const u16 sBerryCrushImpactAndSparklesPal[] = INCBIN_U16("assets/graphics.bin", 0xAEAC, 0x20);
+static const u16 sBerryCrushTimerPal[] = INCBIN_U16("assets/graphics.bin", 0xAECC, 0x20);
 
-static const u32 sBerryCrushCoreTiles[] = INCBIN_U32("graphics/berry_crush/crusher_base.4bpp.lz");
-static const u32 sBerryCrushImpactTiles[] = INCBIN_U32("graphics/berry_crush/impact.4bpp.lz");
-static const u32 sBerryCrushPowderSparklesTiles[] = INCBIN_U32("graphics/berry_crush/sparkle.4bpp.lz");
-static const u32 sBerryCrushTimerTiles[] = INCBIN_U32("graphics/berry_crush/timer_digits.4bpp.lz");
+static const u32 sBerryCrushCoreTiles[] = INCBIN_U32("assets/graphics.bin", 0xAEEC, 0x32C);
+static const u32 sBerryCrushImpactTiles[] = INCBIN_U32("assets/graphics.bin", 0xB218, 0x37C);
+static const u32 sBerryCrushPowderSparklesTiles[] = INCBIN_U32("assets/graphics.bin", 0xB594, 0x14C);
+static const u32 sBerryCrushTimerTiles[] = INCBIN_U32("assets/graphics.bin", 0xB6E0, 0xCC);
 
-static const u32 sCrusherTop_Tilemap[] = INCBIN_U32("graphics/berry_crush/crusher_top.bin.lz");
-static const u32 sContainerCap_Tilemap[] = INCBIN_U32("graphics/berry_crush/container_cap.bin.lz");
-static const u32 sBg_Tilemap[] = INCBIN_U32("graphics/berry_crush/bg.bin.lz");
+static const u32 sCrusherTop_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0xB7AC, 0x130);
+static const u32 sContainerCap_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0xB8DC, 0x198);
+static const u32 sBg_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0xBA74, 0x228);
 
 // Takes the number of players - 2 and a player id and returns the
 // index into sPlayerCoords where that player should be seated

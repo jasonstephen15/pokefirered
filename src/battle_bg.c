@@ -368,73 +368,73 @@ static const struct WindowTemplate sStandardBattleWindowTemplates[] = {
     DUMMY_WIN_TEMPLATE
 };
 
-static const u32 sBattleTerrainPalette_Grass[] = INCBIN_U32("graphics/battle_terrain/grass/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Grass[] = INCBIN_U32("graphics/battle_terrain/grass/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Grass[] = INCBIN_U32("graphics/battle_terrain/grass/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Grass[] = INCBIN_U32("graphics/battle_terrain/grass/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Grass[] = INCBIN_U32("graphics/battle_terrain/grass/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Grass[] = INCBIN_U32("assets/graphics.bin", 0x13E0, 0x4C);
+static const u32 sBattleTerrainTiles_Grass[] = INCBIN_U32("assets/graphics.bin", 0x142C, 0x55C);
+static const u32 sBattleTerrainTilemap_Grass[] = INCBIN_U32("assets/graphics.bin", 0x1988, 0x2C0);
+static const u32 sBattleTerrainAnimTiles_Grass[] = INCBIN_U32("assets/graphics.bin", 0x1C48, 0x2F0);
+static const u32 sBattleTerrainAnimTilemap_Grass[] = INCBIN_U32("assets/graphics.bin", 0x1F38, 0x11C);
 
-static const u32 sBattleTerrainPalette_LongGrass[] = INCBIN_U32("graphics/battle_terrain/longgrass/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_LongGrass[] = INCBIN_U32("graphics/battle_terrain/longgrass/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_LongGrass[] = INCBIN_U32("graphics/battle_terrain/longgrass/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_LongGrass[] = INCBIN_U32("graphics/battle_terrain/longgrass/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_LongGrass[] = INCBIN_U32("graphics/battle_terrain/longgrass/anim.bin.lz");
+static const u32 sBattleTerrainPalette_LongGrass[] = INCBIN_U32("assets/graphics.bin", 0x2054, 0x50);
+static const u32 sBattleTerrainTiles_LongGrass[] = INCBIN_U32("assets/graphics.bin", 0x20A4, 0x55C);
+static const u32 sBattleTerrainTilemap_LongGrass[] = INCBIN_U32("assets/graphics.bin", 0x2600, 0x2BC);
+static const u32 sBattleTerrainAnimTiles_LongGrass[] = INCBIN_U32("assets/graphics.bin", 0x28BC, 0x534);
+static const u32 sBattleTerrainAnimTilemap_LongGrass[] = INCBIN_U32("assets/graphics.bin", 0x2DF0, 0x188);
 
-static const u32 sBattleTerrainPalette_Sand[] = INCBIN_U32("graphics/battle_terrain/sand/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Sand[] = INCBIN_U32("graphics/battle_terrain/sand/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Sand[] = INCBIN_U32("graphics/battle_terrain/sand/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Sand[] = INCBIN_U32("graphics/battle_terrain/sand/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Sand[] = INCBIN_U32("graphics/battle_terrain/sand/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Sand[] = INCBIN_U32("assets/graphics.bin", 0x2F78, 0x4C);
+static const u32 sBattleTerrainTiles_Sand[] = INCBIN_U32("assets/graphics.bin", 0x2FC4, 0x398);
+static const u32 sBattleTerrainTilemap_Sand[] = INCBIN_U32("assets/graphics.bin", 0x335C, 0x29C);
+static const u32 sBattleTerrainAnimTiles_Sand[] = INCBIN_U32("assets/graphics.bin", 0x35F8, 0x22C);
+static const u32 sBattleTerrainAnimTilemap_Sand[] = INCBIN_U32("assets/graphics.bin", 0x3824, 0xFC);
 
-static const u32 sBattleTerrainPalette_Underwater[] = INCBIN_U32("graphics/battle_terrain/underwater/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Underwater[] = INCBIN_U32("graphics/battle_terrain/underwater/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Underwater[] = INCBIN_U32("graphics/battle_terrain/underwater/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Underwater[] = INCBIN_U32("graphics/battle_terrain/underwater/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Underwater[] = INCBIN_U32("graphics/battle_terrain/underwater/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Underwater[] = INCBIN_U32("assets/graphics.bin", 0x3920, 0x50);
+static const u32 sBattleTerrainTiles_Underwater[] = INCBIN_U32("assets/graphics.bin", 0x3970, 0x340);
+static const u32 sBattleTerrainTilemap_Underwater[] = INCBIN_U32("assets/graphics.bin", 0x3CB0, 0x2A0);
+static const u32 sBattleTerrainAnimTiles_Underwater[] = INCBIN_U32("assets/graphics.bin", 0x3F50, 0x16C);
+static const u32 sBattleTerrainAnimTilemap_Underwater[] = INCBIN_U32("assets/graphics.bin", 0x40BC, 0xC0);
 
-static const u32 sBattleTerrainPalette_Water[] = INCBIN_U32("graphics/battle_terrain/water/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Water[] = INCBIN_U32("graphics/battle_terrain/water/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Water[] = INCBIN_U32("graphics/battle_terrain/water/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Water[] = INCBIN_U32("graphics/battle_terrain/water/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Water[] = INCBIN_U32("graphics/battle_terrain/water/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Water[] = INCBIN_U32("assets/graphics.bin", 0x417C, 0x50);
+static const u32 sBattleTerrainTiles_Water[] = INCBIN_U32("assets/graphics.bin", 0x41CC, 0x41C);
+static const u32 sBattleTerrainTilemap_Water[] = INCBIN_U32("assets/graphics.bin", 0x45E8, 0x2A0);
+static const u32 sBattleTerrainAnimTiles_Water[] = INCBIN_U32("assets/graphics.bin", 0x4888, 0x338);
+static const u32 sBattleTerrainAnimTilemap_Water[] = INCBIN_U32("assets/graphics.bin", 0x4BC0, 0x100);
 
-static const u32 sBattleTerrainPalette_Pond[] = INCBIN_U32("graphics/battle_terrain/pond/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Pond[] = INCBIN_U32("graphics/battle_terrain/pond/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Pond[] = INCBIN_U32("graphics/battle_terrain/pond/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Pond[] = INCBIN_U32("graphics/battle_terrain/pond/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Pond[] = INCBIN_U32("graphics/battle_terrain/pond/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Pond[] = INCBIN_U32("assets/graphics.bin", 0x4CC0, 0x58);
+static const u32 sBattleTerrainTiles_Pond[] = INCBIN_U32("assets/graphics.bin", 0x4D18, 0x344);
+static const u32 sBattleTerrainTilemap_Pond[] = INCBIN_U32("assets/graphics.bin", 0x505C, 0x298);
+static const u32 sBattleTerrainAnimTiles_Pond[] = INCBIN_U32("assets/graphics.bin", 0x52F4, 0x20C);
+static const u32 sBattleTerrainAnimTilemap_Pond[] = INCBIN_U32("assets/graphics.bin", 0x5500, 0xB8);
 
-static const u32 sBattleTerrainPalette_Mountain[] = INCBIN_U32("graphics/battle_terrain/mountain/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Mountain[] = INCBIN_U32("graphics/battle_terrain/mountain/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Mountain[] = INCBIN_U32("graphics/battle_terrain/mountain/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Mountain[] = INCBIN_U32("graphics/battle_terrain/mountain/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Mountain[] = INCBIN_U32("graphics/battle_terrain/mountain/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Mountain[] = INCBIN_U32("assets/graphics.bin", 0x55B8, 0x4C);
+static const u32 sBattleTerrainTiles_Mountain[] = INCBIN_U32("assets/graphics.bin", 0x5604, 0x334);
+static const u32 sBattleTerrainTilemap_Mountain[] = INCBIN_U32("assets/graphics.bin", 0x5938, 0x2A0);
+static const u32 sBattleTerrainAnimTiles_Mountain[] = INCBIN_U32("assets/graphics.bin", 0x5BD8, 0x2D0);
+static const u32 sBattleTerrainAnimTilemap_Mountain[] = INCBIN_U32("assets/graphics.bin", 0x5EA8, 0xD0);
 
-static const u32 sBattleTerrainPalette_Cave[] = INCBIN_U32("graphics/battle_terrain/cave/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Cave[] = INCBIN_U32("graphics/battle_terrain/cave/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Cave[] = INCBIN_U32("graphics/battle_terrain/cave/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Cave[] = INCBIN_U32("graphics/battle_terrain/cave/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Cave[] = INCBIN_U32("graphics/battle_terrain/cave/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Cave[] = INCBIN_U32("assets/graphics.bin", 0x5F78, 0x54);
+static const u32 sBattleTerrainTiles_Cave[] = INCBIN_U32("assets/graphics.bin", 0x5FCC, 0x42C);
+static const u32 sBattleTerrainTilemap_Cave[] = INCBIN_U32("assets/graphics.bin", 0x63F8, 0x2A0);
+static const u32 sBattleTerrainAnimTiles_Cave[] = INCBIN_U32("assets/graphics.bin", 0x6698, 0x5E0);
+static const u32 sBattleTerrainAnimTilemap_Cave[] = INCBIN_U32("assets/graphics.bin", 0x6C78, 0x158);
 
-static const u32 sBattleTerrainPalette_Building[] = INCBIN_U32("graphics/battle_terrain/building/terrain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Building[] = INCBIN_U32("graphics/battle_terrain/building/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Building[] = INCBIN_U32("graphics/battle_terrain/building/terrain.bin.lz");
-static const u32 sBattleTerrainAnimTiles_Building[] = INCBIN_U32("graphics/battle_terrain/building/anim.4bpp.lz");
-static const u32 sBattleTerrainAnimTilemap_Building[] = INCBIN_U32("graphics/battle_terrain/building/anim.bin.lz");
+static const u32 sBattleTerrainPalette_Building[] = INCBIN_U32("assets/graphics.bin", 0x6DD0, 0x44);
+static const u32 sBattleTerrainTiles_Building[] = INCBIN_U32("assets/graphics.bin", 0x6E14, 0x338);
+static const u32 sBattleTerrainTilemap_Building[] = INCBIN_U32("assets/graphics.bin", 0x714C, 0x2A4);
+static const u32 sBattleTerrainAnimTiles_Building[] = INCBIN_U32("assets/graphics.bin", 0x73F0, 0x80);
+static const u32 sBattleTerrainAnimTilemap_Building[] = INCBIN_U32("assets/graphics.bin", 0x7470, 0x98);
 
-static const u32 sBattleTerrainPalette_Link[] = INCBIN_U32("graphics/battle_terrain/indoor/link.gbapal.lz");
-static const u32 sBattleTerrainPalette_Gym[] = INCBIN_U32("graphics/battle_terrain/indoor/gym.gbapal.lz");
-static const u32 sBattleTerrainPalette_Leader[] = INCBIN_U32("graphics/battle_terrain/indoor/leader.gbapal.lz");
-static const u32 sBattleTerrainPalette_Indoor2[] = INCBIN_U32("graphics/battle_terrain/indoor/2.gbapal.lz");
-static const u32 sBattleTerrainPalette_Indoor1[] = INCBIN_U32("graphics/battle_terrain/indoor/1.gbapal.lz");
-static const u32 sBattleTerrainPalette_Lorelei[] = INCBIN_U32("graphics/battle_terrain/indoor/lorelei.gbapal.lz");
-static const u32 sBattleTerrainPalette_Bruno[] = INCBIN_U32("graphics/battle_terrain/indoor/bruno.gbapal.lz");
-static const u32 sBattleTerrainPalette_Agatha[] = INCBIN_U32("graphics/battle_terrain/indoor/agatha.gbapal.lz");
-static const u32 sBattleTerrainPalette_Lance[] = INCBIN_U32("graphics/battle_terrain/indoor/lance.gbapal.lz");
-static const u32 sBattleTerrainPalette_Champion[] = INCBIN_U32("graphics/battle_terrain/indoor/champion.gbapal.lz");
-static const u32 sBattleTerrainPalette_Plain[] = INCBIN_U32("graphics/battle_terrain/indoor/plain.gbapal.lz");
-static const u32 sBattleTerrainTiles_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.4bpp.lz");
-static const u32 sBattleTerrainTilemap_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.bin.lz");
+static const u32 sBattleTerrainPalette_Link[] = INCBIN_U32("assets/graphics.bin", 0x7508, 0x44);
+static const u32 sBattleTerrainPalette_Gym[] = INCBIN_U32("assets/graphics.bin", 0x754C, 0x4C);
+static const u32 sBattleTerrainPalette_Leader[] = INCBIN_U32("assets/graphics.bin", 0x7598, 0x4C);
+static const u32 sBattleTerrainPalette_Indoor2[] = INCBIN_U32("assets/graphics.bin", 0x75E4, 0x4C);
+static const u32 sBattleTerrainPalette_Indoor1[] = INCBIN_U32("assets/graphics.bin", 0x7630, 0x54);
+static const u32 sBattleTerrainPalette_Lorelei[] = INCBIN_U32("assets/graphics.bin", 0x7684, 0x4C);
+static const u32 sBattleTerrainPalette_Bruno[] = INCBIN_U32("assets/graphics.bin", 0x76D0, 0x50);
+static const u32 sBattleTerrainPalette_Agatha[] = INCBIN_U32("assets/graphics.bin", 0x7720, 0x4C);
+static const u32 sBattleTerrainPalette_Lance[] = INCBIN_U32("assets/graphics.bin", 0x776C, 0x50);
+static const u32 sBattleTerrainPalette_Champion[] = INCBIN_U32("assets/graphics.bin", 0x77BC, 0x40);
+static const u32 sBattleTerrainPalette_Plain[] = INCBIN_U32("assets/graphics.bin", 0x77FC, 0x3C);
+static const u32 sBattleTerrainTiles_Indoor[] = INCBIN_U32("assets/graphics.bin", 0x7838, 0x338);
+static const u32 sBattleTerrainTilemap_Indoor[] = INCBIN_U32("assets/graphics.bin", 0x7B70, 0x2A4);
 
 static const struct BattleBackground sBattleTerrainTable[] = {
     [BATTLE_TERRAIN_GRASS] =

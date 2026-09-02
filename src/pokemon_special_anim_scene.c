@@ -51,16 +51,16 @@ static void Task_LevelUpVerticalSprites(u8 taskId);
 static void CreateLevelUpVerticalSprite(u8 taskId, s16 *data);
 static void SpriteCB_LevelUpVertical(struct Sprite *sprite);
 
-static const u16 sBg_Pal[] = INCBIN_U16("graphics/pokemon_special_anim/bg.gbapal");
-static const u16 sBg_TmHm_Pal[] = INCBIN_U16("graphics/pokemon_special_anim/bg_tm_hm.gbapal");
-static const u32 sBg_Gfx[] = INCBIN_U32("graphics/pokemon_special_anim/bg.4bpp.lz");
-static const u32 sBg_Tilemap[] = INCBIN_U32("graphics/pokemon_special_anim/bg.bin.lz");
-static const u16 sLevelUp_Pal[] = INCBIN_U16("graphics/pokemon_special_anim/level_up.gbapal");
-static const u32 sLevelUp_Gfx[] = INCBIN_U32("graphics/pokemon_special_anim/level_up.4bpp.lz");
-static const u16 sStar_Pal[] = INCBIN_U16("graphics/pokemon_special_anim/star.gbapal");
-static const u32 sStar_Gfx[] = INCBIN_U32("graphics/pokemon_special_anim/star.4bpp.lz");
-static const u16 sOutwardSpiralDots_Pal[] = INCBIN_U16("graphics/pokemon_special_anim/outward_spiral_dots.gbapal");
-static const u32 sOutwardSpiralDots_Gfx[] = INCBIN_U32("graphics/pokemon_special_anim/outward_spiral_dots.4bpp.lz");
+static const u16 sBg_Pal[] = INCBIN_U16("assets/graphics.bin", 0x259450, 0x20);
+static const u16 sBg_TmHm_Pal[] = INCBIN_U16("assets/graphics.bin", 0x259470, 0x20);
+static const u32 sBg_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x259490, 0xC0);
+static const u32 sBg_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x259550, 0x12C);
+static const u16 sLevelUp_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25967C, 0x20);
+static const u32 sLevelUp_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x25969C, 0x1C);
+static const u16 sStar_Pal[] = INCBIN_U16("assets/graphics.bin", 0x2596B8, 0x20);
+static const u32 sStar_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x2596D8, 0x7C);
+static const u16 sOutwardSpiralDots_Pal[] = INCBIN_U16("assets/graphics.bin", 0x259754, 0x20);
+static const u32 sOutwardSpiralDots_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x259774, 0x20);
 
 static const struct BgTemplate sBgTemplates[] = {
     {

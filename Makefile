@@ -58,13 +58,11 @@ ASM_SUBDIR = asm
 DATA_SRC_SUBDIR = src/data
 DATA_ASM_SUBDIR = data
 SONG_SUBDIR = sound/songs
-MID_SUBDIR = sound/songs/midi
 
 C_BUILDDIR = $(OBJ_DIR)/$(C_SUBDIR)
 ASM_BUILDDIR = $(OBJ_DIR)/$(ASM_SUBDIR)
 DATA_ASM_BUILDDIR = $(OBJ_DIR)/$(DATA_ASM_SUBDIR)
 SONG_BUILDDIR = $(OBJ_DIR)/$(SONG_SUBDIR)
-MID_BUILDDIR = $(OBJ_DIR)/$(MID_SUBDIR)
 
 SHELL := bash -o pipefail
 
@@ -103,19 +101,12 @@ ifeq ($(DINFO),1)
   override CFLAGS += -g
 endif
 
-# Variable filled out in other make files
-AUTO_GEN_TARGETS :=
 include make_tools.mk
 # Tool executables
-GFX       := $(TOOLS_DIR)/gbagfx/gbagfx$(EXE)
-WAV2AGB   := $(TOOLS_DIR)/wav2agb/wav2agb$(EXE)
-MID       := $(TOOLS_DIR)/mid2agb/mid2agb$(EXE)
 SCANINC   := $(TOOLS_DIR)/scaninc/scaninc$(EXE)
 PREPROC   := $(TOOLS_DIR)/preproc/preproc$(EXE)
 RAMSCRGEN := $(TOOLS_DIR)/ramscrgen/ramscrgen$(EXE)
 FIX       := $(TOOLS_DIR)/gbafix/gbafix$(EXE)
-MAPJSON   := $(TOOLS_DIR)/mapjson/mapjson$(EXE)
-JSONPROC  := $(TOOLS_DIR)/jsonproc/jsonproc$(EXE)
 
 PERL := perl
 SHA1 := $(shell { command -v sha1sum || command -v shasum; } 2>/dev/null) -c
@@ -132,7 +123,7 @@ MAKEFLAGS += --no-print-directory
 ALL_BUILDS := firered firered_rev1 firered_rev10 leafgreen leafgreen_rev1 leafgreen_rev10
 ALL_BUILDS += $(ALL_BUILDS:%=%_modern)
 
-RULES_NO_SCAN += clean clean-assets tidy generated clean-generated
+RULES_NO_SCAN += clean tidy
 .PHONY: all rom modern compare $(ALL_BUILDS) $(ALL_BUILDS:%=compare_%)
 .PHONY: $(RULES_NO_SCAN)
 
@@ -159,11 +150,6 @@ ifeq ($(SETUP_PREREQS),1)
   ifneq ($(.SHELLSTATUS),0)
     $(error Errors occurred while building tools. See error messages above for more details)
   endif
-  # Oh and also generate mapjson sources before we use `SCANINC`.
-  $(foreach line, $(shell $(MAKE) generated | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
-  ifneq ($(.SHELLSTATUS),0)
-    $(error Errors occurred while generating map-related sources. See error messages above for more details)
-  endif
 endif
 
 # Collect sources
@@ -186,8 +172,7 @@ DATA_ASM_OBJS := $(patsubst $(DATA_ASM_SUBDIR)/%.s,$(DATA_ASM_BUILDDIR)/%.o,$(DA
 SONG_SRCS := $(wildcard $(SONG_SUBDIR)/*.s)
 SONG_OBJS := $(patsubst $(SONG_SUBDIR)/%.s,$(SONG_BUILDDIR)/%.o,$(SONG_SRCS))
 
-MID_SRCS := $(wildcard $(MID_SUBDIR)/*.mid)
-MID_OBJS := $(patsubst $(MID_SUBDIR)/%.mid,$(MID_BUILDDIR)/%.o,$(MID_SRCS))
+MID_OBJS :=
 
 OBJS     := $(C_OBJS) $(C_ASM_OBJS) $(ASM_OBJS) $(DATA_ASM_OBJS) $(SONG_OBJS) $(MID_OBJS)
 OBJS_REL := $(patsubst $(OBJ_DIR)/%,%,$(OBJS))
@@ -207,15 +192,7 @@ endif
 
 syms: $(SYM)
 
-clean: tidy clean-tools clean-generated clean-assets
-
-clean-assets:
-	rm -f $(MID_SUBDIR)/*.s
-	rm -f $(DATA_ASM_SUBDIR)/layouts/layouts.inc $(DATA_ASM_SUBDIR)/layouts/layouts_table.inc
-	rm -f $(DATA_ASM_SUBDIR)/maps/connections.inc $(DATA_ASM_SUBDIR)/maps/events.inc $(DATA_ASM_SUBDIR)/maps/groups.inc $(DATA_ASM_SUBDIR)/maps/headers.inc
-	find sound -iname '*.bin' -exec rm {} +
-	find . \( -iname '*.1bpp' -o -iname '*.4bpp' -o -iname '*.8bpp' -o -iname '*.gbapal' -o -iname '*.lz' -o -iname '*.rl' -o -iname '*.hwlatfont' -o -iname '*.fwlatfont' -o -iname '*.hwjpnfont' -o -iname '*.fwjpnfont' \) -exec rm {} +
-	find $(DATA_ASM_SUBDIR)/maps \( -iname 'connections.inc' -o -iname 'events.inc' -o -iname 'header.inc' \) -exec rm {} +
+clean: tidy clean-tools
 
 tidy:
 	$(RM) $(ALL_BUILDS:%=poke%{.gba,.elf,.map})
@@ -242,34 +219,14 @@ leafgreen_modern:      ; @$(MAKE) GAME_VERSION=LEAFGREEN MODERN=1
 leafgreen_rev1_modern: ; @$(MAKE) GAME_VERSION=LEAFGREEN GAME_REVISION=1 MODERN=1
 
 # Other rules
-include graphics_file_rules.mk
-include tileset_rules.mk
-include map_data_rules.mk
-include spritesheet_rules.mk
-include json_data_rules.mk
-include audio_rules.mk
 
-# NOTE: Tools must have been built prior (FIXME)
-# so you can't really call this rule directly
-generated: $(AUTO_GEN_TARGETS)
-	@: # Silence the "Nothing to be done for `generated'" message, which some people were confusing for an error.
 
 %.s:   ;
-%.png: ;
-%.pal: ;
-%.wav: ;
+%.bin: ;
 
-%.1bpp:   %.png  ; $(GFX) $< $@
-%.4bpp:   %.png  ; $(GFX) $< $@
-%.8bpp:   %.png  ; $(GFX) $< $@
-%.gbapal: %.pal  ; $(GFX) $< $@
-%.gbapal: %.png  ; $(GFX) $< $@
-%.lz:     %      ; $(GFX) $< $@
-%.rl:     %      ; $(GFX) $< $@
-
-clean-generated:
-	@rm -f $(AUTO_GEN_TARGETS)
-	@echo "rm -f <AUTO_GEN_TARGETS>"
+# Song data (merged mid2agb output)
+$(SONG_BUILDDIR)/%.o: $(SONG_SUBDIR)/%.s
+	$(AS) $(ASFLAGS) -I sound -o $@ $<
 
 ifeq ($(MODERN),0)
 $(C_BUILDDIR)/agb_flash.o: CFLAGS := -O -mthumb-interwork
@@ -338,6 +295,12 @@ $(C_BUILDDIR)/%.d: $(C_SUBDIR)/%.s
 ifneq ($(NODEP),1)
 -include $(addprefix $(OBJ_DIR)/,$(C_ASM_SRCS:.s=.d))
 endif
+
+# maps.s / map_events.s keep the preprocessor flags they had in map_data_rules.mk
+$(DATA_ASM_BUILDDIR)/maps.o: $(DATA_ASM_SUBDIR)/maps.s
+	$(PREPROC) $< charmap.txt | $(CPP) -I include -nostdinc -undef -Wno-unicode - | $(PREPROC) -ie $< charmap.txt | $(AS) $(ASFLAGS) -o $@
+$(DATA_ASM_BUILDDIR)/map_events.o: $(DATA_ASM_SUBDIR)/map_events.s
+	$(PREPROC) $< charmap.txt | $(CPP) -I include -nostdinc -undef -Wno-unicode - | $(PREPROC) -ie $< charmap.txt | $(AS) $(ASFLAGS) -o $@
 
 $(DATA_ASM_BUILDDIR)/%.o: $(DATA_ASM_SUBDIR)/%.s
 	$(PREPROC) $< charmap.txt | $(CPP) $(INCLUDE_SCANINC_ARGS) - | $(PREPROC) -ie $< charmap.txt | $(AS) $(ASFLAGS) -o $@

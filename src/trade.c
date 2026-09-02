@@ -221,10 +221,10 @@ static const size_t sSizesAndOffsets[] = {
     0x528 // unk
 };
 
-static const u16 sTradeMovesBoxTilemap[] = INCBIN_U16("graphics/trade/moves_box_map.bin");
-static const u16 sTradePartyBoxTilemap[] = INCBIN_U16("graphics/trade/party_box_map.bin");
-static const u8 sTradeStripesBG2Tilemap[] = INCBIN_U8("graphics/trade/stripes_bg2_map.bin");
-static const u8 sTradeStripesBG3Tilemap[] = INCBIN_U8("graphics/trade/stripes_bg3_map.bin");
+static const u16 sTradeMovesBoxTilemap[] = INCBIN_U16("assets/graphics.bin", 0x3190A4, 0x1FE);
+static const u16 sTradePartyBoxTilemap[] = INCBIN_U16("assets/graphics.bin", 0x3192A4, 0x1FE);
+static const u8 sTradeStripesBG2Tilemap[] = INCBIN_U8("assets/graphics.bin", 0x3194A4, 0x800);
+static const u8 sTradeStripesBG3Tilemap[] = INCBIN_U8("assets/graphics.bin", 0x319CA4, 0x800);
 
 static const struct OamData sOamData_MenuText = {
     .shape = SPRITE_SHAPE(32x16),
@@ -323,7 +323,7 @@ static const struct SpriteTemplate sSpriteTemplate_MenuText = {
     .callback = SpriteCallbackDummy
 };
 
-static const u16 sMenuText_Pal[] = INCBIN_U16("graphics/trade/text.gbapal");
+static const u16 sMenuText_Pal[] = INCBIN_U16("assets/graphics.bin", 0x31A4A4, 0x20);
 static const struct SpritePalette sSpritePalette_MenuText = {
     .data = sMenuText_Pal,
     .tag = PALTAG_MENU_TEXT

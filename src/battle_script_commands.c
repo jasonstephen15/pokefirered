@@ -660,8 +660,8 @@ static const struct WindowTemplate sUnusedWinTemplate =
     .baseBlock = 0x3F
 };
 
-static const u16 sLevelUpBanner_Pal[] = INCBIN_U16("graphics/battle_interface/level_up_banner.gbapal");
-static const u32 sLevelUpBanner_Gfx[] = INCBIN_U32("graphics/battle_interface/level_up_banner.4bpp.lz");
+static const u16 sLevelUpBanner_Pal[] = INCBIN_U16("assets/graphics.bin", 0x8754, 0x20);
+static const u32 sLevelUpBanner_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x8774, 0xC8);
 
 // unused
 static const u8 sRubyLevelUpStatBoxStats[] =

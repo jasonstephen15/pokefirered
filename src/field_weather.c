@@ -127,18 +127,18 @@ static const u8 sBasePaletteGammaTypes[32] = {
     GAMMA_NORMAL,
 };
 
-const u16 gDefaultWeatherSpritePalette[] = INCBIN_U16("graphics/weather/default.gbapal");
-const u16 gCloudsWeatherPalette[] = INCBIN_U16("graphics/weather/cloud.gbapal");
-const u16 gSandstormWeatherPalette[] = INCBIN_U16("graphics/weather/sandstorm.gbapal");
-const u8 gWeatherFogDiagonalTiles[] = INCBIN_U8("graphics/weather/fog_diagonal.4bpp");
-const u8 gWeatherFogHorizontalTiles[] = INCBIN_U8("graphics/weather/fog_horizontal.4bpp");
-const u8 gWeatherCloudTiles[] = INCBIN_U8("graphics/weather/cloud.4bpp");
-const u8 gWeatherSnow1Tiles[] = INCBIN_U8("graphics/weather/snow0.4bpp");
-const u8 gWeatherSnow2Tiles[] = INCBIN_U8("graphics/weather/snow1.4bpp");
-const u8 gWeatherBubbleTiles[] = INCBIN_U8("graphics/weather/bubble.4bpp");
-const u8 gWeatherAshTiles[] = INCBIN_U8("graphics/weather/ash.4bpp");
-const u8 gWeatherRainTiles[] = INCBIN_U8("graphics/weather/rain.4bpp");
-const u8 gWeatherSandstormTiles[] = INCBIN_U8("graphics/weather/sandstorm.4bpp");
+const u16 gDefaultWeatherSpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x67F24, 0x20);
+const u16 gCloudsWeatherPalette[] = INCBIN_U16("assets/graphics.bin", 0x67F44, 0x20);
+const u16 gSandstormWeatherPalette[] = INCBIN_U16("assets/graphics.bin", 0x67F64, 0x20);
+const u8 gWeatherFogDiagonalTiles[] = INCBIN_U8("assets/graphics.bin", 0x67F84, 0x800);
+const u8 gWeatherFogHorizontalTiles[] = INCBIN_U8("assets/graphics.bin", 0x68784, 0x800);
+const u8 gWeatherCloudTiles[] = INCBIN_U8("assets/graphics.bin", 0x68F84, 0x800);
+const u8 gWeatherSnow1Tiles[] = INCBIN_U8("assets/graphics.bin", 0x69784, 0x20);
+const u8 gWeatherSnow2Tiles[] = INCBIN_U8("assets/graphics.bin", 0x697A4, 0x20);
+const u8 gWeatherBubbleTiles[] = INCBIN_U8("assets/graphics.bin", 0x697C4, 0x40);
+const u8 gWeatherAshTiles[] = INCBIN_U8("assets/graphics.bin", 0x69804, 0x1000);
+const u8 gWeatherRainTiles[] = INCBIN_U8("assets/graphics.bin", 0x6A804, 0x600);
+const u8 gWeatherSandstormTiles[] = INCBIN_U8("assets/graphics.bin", 0x6AE04, 0xA00);
 
 // code
 void StartWeather(void)

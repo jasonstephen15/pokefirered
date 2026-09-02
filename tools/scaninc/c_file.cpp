@@ -253,11 +253,19 @@ void CFile::CheckIncbin()
     {
         SkipWhitespace();
 
-        std::string path = ReadPath();
+        if (m_buffer[m_pos] >= '0' && m_buffer[m_pos] <= '9')
+        {
+            // Slice offset/length argument: skip the number.
+            while (isalnum(m_buffer[m_pos]))
+                m_pos++;
+        }
+        else
+        {
+            std::string path = ReadPath();
+            m_incbins.emplace(path);
+        }
 
         SkipWhitespace();
-
-        m_incbins.emplace(path);
 
         if (m_buffer[m_pos] != ',')
             break;

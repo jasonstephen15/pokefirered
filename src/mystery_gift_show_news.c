@@ -82,19 +82,19 @@ static const struct ScrollArrowsTemplate sArrowsTemplate = {
     .palNum = 0
 };
 
-static const u16 sNews0Pal[] = INCBIN_U16("graphics/wonder_news/bg0.gbapal");
-static const u16 sNews6Pal[] = INCBIN_U16("graphics/wonder_news/bg6.gbapal");
-static const u16 sNews7Pal[] = INCBIN_U16("graphics/wonder_news/bg7.gbapal");
-static const u8 sNews0Gfx[] = INCBIN_U8("graphics/wonder_news/bg0.4bpp.lz");
-static const u8 sNews0Map[] = INCBIN_U8("graphics/wonder_news/bg0.bin.lz");
-static const u8 sNews1Gfx[] = INCBIN_U8("graphics/wonder_news/bg1.4bpp.lz");
-static const u8 sNews1Map[] = INCBIN_U8("graphics/wonder_news/bg1.bin.lz");
-static const u8 sNews2Gfx[] = INCBIN_U8("graphics/wonder_news/bg2.4bpp.lz");
-static const u8 sNews2Map[] = INCBIN_U8("graphics/wonder_news/bg2.bin.lz");
-static const u8 sNews6Gfx[] = INCBIN_U8("graphics/wonder_news/bg6.4bpp.lz");
-static const u8 sNews6Map[] = INCBIN_U8("graphics/wonder_news/bg6.bin.lz");
-static const u8 sNews7Gfx[] = INCBIN_U8("graphics/wonder_news/bg7.4bpp.lz");
-static const u8 sNews7Map[] = INCBIN_U8("graphics/wonder_news/bg7.bin.lz");
+static const u16 sNews0Pal[] = INCBIN_U16("assets/graphics.bin", 0x24E5D0, 0x20);
+static const u16 sNews6Pal[] = INCBIN_U16("assets/graphics.bin", 0x24E5F0, 0x20);
+static const u16 sNews7Pal[] = INCBIN_U16("assets/graphics.bin", 0x24E610, 0x20);
+static const u8 sNews0Gfx[] = INCBIN_U8("assets/graphics.bin", 0x24E630, 0x80);
+static const u8 sNews0Map[] = INCBIN_U8("assets/graphics.bin", 0x24E6B0, 0xDC);
+static const u8 sNews1Gfx[] = INCBIN_U8("assets/graphics.bin", 0x24E78C, 0x30);
+static const u8 sNews1Map[] = INCBIN_U8("assets/graphics.bin", 0x24E7BC, 0xC0);
+static const u8 sNews2Gfx[] = INCBIN_U8("assets/graphics.bin", 0x24E87C, 0x70);
+static const u8 sNews2Map[] = INCBIN_U8("assets/graphics.bin", 0x24E8EC, 0xCC);
+static const u8 sNews6Gfx[] = INCBIN_U8("assets/graphics.bin", 0x24E9B8, 0x90);
+static const u8 sNews6Map[] = INCBIN_U8("assets/graphics.bin", 0x24EA48, 0xDC);
+static const u8 sNews7Gfx[] = INCBIN_U8("assets/graphics.bin", 0x24EB24, 0x90);
+static const u8 sNews7Map[] = INCBIN_U8("assets/graphics.bin", 0x24EBB4, 0xDC);
 
 static const struct WonderGraphics sNewsGraphics[NUM_WONDER_BGS] = {
     {.titleTextPal = 1, .bodyTextPal = 0, .tiles = sNews0Gfx, .map = sNews0Map, .pal = sNews0Pal},

@@ -1,5 +1,5 @@
 	.section .rodata
 
 gMultiBootProgram_EReader_Start::
-	.incbin "data/mb_ereader.gba"
+	.incbin "assets/data.bin", 0x7AEA0, 0x3760
 gMultiBootProgram_EReader_End::

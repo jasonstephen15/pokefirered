@@ -34,8 +34,8 @@ static EWRAM_DATA struct HelpSystemVideoState sVideoState = {0};
 EWRAM_DATA struct HelpSystemListMenu gHelpSystemListMenu = {0};
 EWRAM_DATA struct ListMenuItem gHelpSystemListMenuItems[52] = {0};
 
-static const u16 sTiles[] = INCBIN_U16("graphics/help_system/bg_tiles.4bpp");
-static const u16 sPals[] = INCBIN_U16("graphics/help_system/bg_tiles.gbapal");
+static const u16 sTiles[] = INCBIN_U16("assets/graphics.bin", 0x220AB0, 0x120);
+static const u16 sPals[] = INCBIN_U16("assets/graphics.bin", 0x220BD0, 0x20);
 
 u8 RunHelpSystemCallback(void)
 {

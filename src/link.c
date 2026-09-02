@@ -173,13 +173,13 @@ static void SendRecvDone(void);
 static void LinkTest_PrintHex(u32 pos, u8 a0, u8 a1, u8 a2);
 #endif
 
-static const u16 sWirelessLinkDisplayPal[] = INCBIN_U16("graphics/link/wireless_display.gbapal");
-static const u16 sWirelessLinkDisplayGfx[] = INCBIN_U16("graphics/link/wireless_display.4bpp.lz");
-static const u16 sWirelessLinkDisplayTilemap[] = INCBIN_U16("graphics/link/wireless_display.bin.lz");
+static const u16 sWirelessLinkDisplayPal[] = INCBIN_U16("assets/graphics.bin", 0x22ABA0, 0x20);
+static const u16 sWirelessLinkDisplayGfx[] = INCBIN_U16("assets/graphics.bin", 0x22ABC0, 0x4A8);
+static const u16 sWirelessLinkDisplayTilemap[] = INCBIN_U16("assets/graphics.bin", 0x22B068, 0x1EC);
 #if REVISION >= 0xA
 #else
-static const u16 sLinkTestFontPal[] = INCBIN_U16("graphics/link/test_font.gbapal");
-static const u16 sLinkTestFontGfx[] = INCBIN_U16("graphics/link/test_font.4bpp");
+static const u16 sLinkTestFontPal[] = INCBIN_U16("assets/graphics.bin", 0x22B254, 0x20);
+static const u16 sLinkTestFontGfx[] = INCBIN_U16("assets/graphics.bin", 0x22B274, 0x2000);
 #endif
 
 static const struct BlockRequest sBlockRequests[] = {

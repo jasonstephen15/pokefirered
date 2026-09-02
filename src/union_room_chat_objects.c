@@ -27,11 +27,11 @@ static EWRAM_DATA struct UnionRoomChat3 *sWork = NULL;
 static void SpriteCB_TextEntryCursor(struct Sprite *sprite);
 static void SpriteCB_CharacterSelectCursor(struct Sprite *sprite);
 
-static const u16 sUnionRoomChatInterfacePal[] = INCBIN_U16("graphics/union_room_chat/objects.gbapal");
-static const u32 sSelectorCursor_Gfx[] = INCBIN_U32("graphics/union_room_chat/selector_cursor.4bpp.lz");
-static const u32 sTextEntryCursor_Gfx[] = INCBIN_U32("graphics/union_room_chat/text_entry_cursor.4bpp.lz");
-static const u32 sCharacterSelectCursor_Gfx[] = INCBIN_U32("graphics/union_room_chat/character_select_cursor.4bpp.lz");
-static const u32 sRButton_Gfx[] = INCBIN_U32("graphics/union_room_chat/r_button.4bpp.lz");
+static const u16 sUnionRoomChatInterfacePal[] = INCBIN_U16("assets/graphics.bin", 0x326DE8, 0x20);
+static const u32 sSelectorCursor_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x326E08, 0x284);
+static const u32 sTextEntryCursor_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x32708C, 0x20);
+static const u32 sCharacterSelectCursor_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x3270AC, 0x2C);
+static const u32 sRButton_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x3270D8, 0x54);
 
 static const struct CompressedSpriteSheet sSpriteSheets[] = {
     {

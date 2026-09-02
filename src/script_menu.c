@@ -645,10 +645,10 @@ static const struct SpriteTemplate sMuseumFossilSprTemplate = {
     .callback = SpriteCallbackDummy
 };
 
-static const u16 sMuseumAerodactylSprTiles[] = INCBIN_U16("graphics/script_menu/aerodactyl_fossil.4bpp");
-static const u16 sMuseumAerodactylSprPalette[] = INCBIN_U16("graphics/script_menu/aerodactyl_fossil.gbapal");
-static const u16 sMuseumKabutopsSprTiles[] = INCBIN_U16("graphics/script_menu/kabutops_fossil.4bpp");
-static const u16 sMuseumKabutopsSprPalette[] = INCBIN_U16("graphics/script_menu/kabutops_fossil.gbapal");
+static const u16 sMuseumAerodactylSprTiles[] = INCBIN_U16("assets/graphics.bin", 0x261C78, 0x800);
+static const u16 sMuseumAerodactylSprPalette[] = INCBIN_U16("assets/graphics.bin", 0x262478, 0x20);
+static const u16 sMuseumKabutopsSprTiles[] = INCBIN_U16("assets/graphics.bin", 0x262498, 0x800);
+static const u16 sMuseumKabutopsSprPalette[] = INCBIN_U16("assets/graphics.bin", 0x262C98, 0x20);
 
 static const struct SpriteSheet sMuseumKabutopsSprSheets[] = {
     {sMuseumKabutopsSprTiles, sizeof(sMuseumKabutopsSprTiles), GFXTAG_FOSSIL},

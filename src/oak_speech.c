@@ -116,27 +116,27 @@ extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
 extern const struct OamData gOamData_AffineOff_ObjNormal_32x16;
 extern const struct OamData gOamData_AffineOff_ObjNormal_16x8;
 
-static const u16 sOakSpeech_Background_Pals[] = INCBIN_U16("graphics/oak_speech/bg_tiles.gbapal"); // Shared by the Controls Guide, Pikachu Intro and Oak Speech scenes
-static const u32 sControlsGuide_PikachuIntro_Background_Tiles[] = INCBIN_U32("graphics/oak_speech/bg_tiles.4bpp.lz");
-static const u32 sPikachuIntro_Background_Tilemap[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/tilemap.bin.lz");
-static const u32 sOakSpeech_Background_Tiles[] = INCBIN_U32("graphics/oak_speech/oak_speech_bg.4bpp.lz");
-static const u32 sOakSpeech_Background_Tilemap[] = INCBIN_U32("graphics/oak_speech/oak_speech_bg.bin.lz");
-static const u16 sControlsGuide_Tilemap_Page2[] = INCBIN_U16("graphics/oak_speech/controls_guide_page_2.bin");
-static const u16 sControlsGuide_Tilemap_Page3[] = INCBIN_U16("graphics/oak_speech/controls_guide_page_3.bin");
-static const u16 sOakSpeech_Leaf_Pal[] = INCBIN_U16("graphics/oak_speech/leaf/pal.gbapal");
-static const u32 sOakSpeech_Leaf_Tiles[] = INCBIN_U32("graphics/oak_speech/leaf/pic.8bpp.lz");
-static const u16 sOakSpeech_Red_Pal[] = INCBIN_U16("graphics/oak_speech/red/pal.gbapal");
-static const u32 sOakSpeech_Red_Tiles[] = INCBIN_U32("graphics/oak_speech/red/pic.8bpp.lz");
-static const u16 sOakSpeech_Oak_Pal[] = INCBIN_U16("graphics/oak_speech/oak/pal.gbapal");
-static const u32 sOakSpeech_Oak_Tiles[] = INCBIN_U32("graphics/oak_speech/oak/pic.8bpp.lz");
-static const u16 sOakSpeech_Rival_Pal[] = INCBIN_U16("graphics/oak_speech/rival/pal.gbapal");
-static const u32 sOakSpeech_Rival_Tiles[] = INCBIN_U32("graphics/oak_speech/rival/pic.8bpp.lz");
-static const u16 sOakSpeech_Platform_Pal[] = INCBIN_U16("graphics/oak_speech/platform.gbapal");
-static const u16 sPikachuIntro_Pikachu_Pal[] = INCBIN_U16("graphics/oak_speech/pikachu_intro/pikachu.gbapal");
-static const u32 sOakSpeech_Platform_Gfx[] = INCBIN_U32("graphics/oak_speech/platform.4bpp.lz");
-static const u32 sPikachuIntro_PikachuBody_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/body.4bpp.lz");
-static const u32 sPikachuIntro_PikachuEars_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/ears.4bpp.lz");
-static const u32 sPikachuIntro_PikachuEyes_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/eyes.4bpp.lz");
+static const u16 sOakSpeech_Background_Pals[] = INCBIN_U16("assets/graphics.bin", 0x24FBF0, 0x80); // Shared by the Controls Guide, Pikachu Intro and Oak Speech scenes
+static const u32 sControlsGuide_PikachuIntro_Background_Tiles[] = INCBIN_U32("assets/graphics.bin", 0x24FC70, 0x5C0);
+static const u32 sPikachuIntro_Background_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x250230, 0xFC);
+static const u32 sOakSpeech_Background_Tiles[] = INCBIN_U32("assets/graphics.bin", 0x25032C, 0x44);
+static const u32 sOakSpeech_Background_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x250370, 0xAC);
+static const u16 sControlsGuide_Tilemap_Page2[] = INCBIN_U16("assets/graphics.bin", 0x25041C, 0xA0);
+static const u16 sControlsGuide_Tilemap_Page3[] = INCBIN_U16("assets/graphics.bin", 0x2504BC, 0xA0);
+static const u16 sOakSpeech_Leaf_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25055C, 0x40);
+static const u32 sOakSpeech_Leaf_Tiles[] = INCBIN_U32("assets/graphics.bin", 0x25059C, 0x6E8);
+static const u16 sOakSpeech_Red_Pal[] = INCBIN_U16("assets/graphics.bin", 0x250C84, 0x40);
+static const u32 sOakSpeech_Red_Tiles[] = INCBIN_U32("assets/graphics.bin", 0x250CC4, 0x698);
+static const u16 sOakSpeech_Oak_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25135C, 0x40);
+static const u32 sOakSpeech_Oak_Tiles[] = INCBIN_U32("assets/graphics.bin", 0x25139C, 0x698);
+static const u16 sOakSpeech_Rival_Pal[] = INCBIN_U16("assets/graphics.bin", 0x251A34, 0x40);
+static const u32 sOakSpeech_Rival_Tiles[] = INCBIN_U32("assets/graphics.bin", 0x251A74, 0x5E4);
+static const u16 sOakSpeech_Platform_Pal[] = INCBIN_U16("assets/graphics.bin", 0x252058, 0x20);
+static const u16 sPikachuIntro_Pikachu_Pal[] = INCBIN_U16("assets/graphics.bin", 0x252078, 0x20);
+static const u32 sOakSpeech_Platform_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x252098, 0x164);
+static const u32 sPikachuIntro_PikachuBody_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x2521FC, 0x1C0);
+static const u32 sPikachuIntro_PikachuEars_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x2523BC, 0xE4);
+static const u32 sPikachuIntro_PikachuEyes_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x2524A0, 0x40);
 
 static const struct BgTemplate sBgTemplates[] =
 {

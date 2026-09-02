@@ -189,7 +189,7 @@ static const u8 *const sPocketNames[] = {
 #define LIST_TILES_WIDTH  18
 #define LIST_TILES_HEIGHT 12
 
-static const u16 sItemListTilemap[LIST_TILES_WIDTH * LIST_TILES_HEIGHT] = INCBIN_U16("graphics/item_menu/list.bin");
+static const u16 sItemListTilemap[LIST_TILES_WIDTH * LIST_TILES_HEIGHT] = INCBIN_U16("assets/graphics.bin", 0x22A510, 0x1B0);
 
 static const struct MenuAction sItemMenuContextActions[] = {
     [ITEMMENUACTION_USE] = {gOtherText_Use, {.void_u8 = Task_ItemMenuAction_Use}},
@@ -298,7 +298,7 @@ static const struct ScrollArrowsTemplate sPocketSwitchArrowPairTemplate = {
     .palNum = 0,
 };
 
-static const u8 sBlit_SelectButton[] = INCBIN_U8("graphics/interface/select_button.4bpp");
+static const u8 sBlit_SelectButton[] = INCBIN_U8("assets/graphics.bin", 0x22A6C0, 0xC0);
 
 #define tSwitchDir     data[11]
 #define tSwitchCounter data[12]

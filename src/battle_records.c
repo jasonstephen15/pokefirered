@@ -34,9 +34,9 @@ static void PrintBattleRecords(void);
 static void CommitWindow(u8 windowId);
 static void LoadFrameGfxOnBg(u8 bgId);
 
-static const u16 sTiles[] = INCBIN_U16("graphics/battle_records/bg_tiles.4bpp");
-static const u16 sPalette[] = INCBIN_U16("graphics/battle_records/bg_tiles.gbapal");
-static const u16 sTilemap[] = INCBIN_U16("graphics/battle_records/bg_tiles.bin");
+static const u16 sTiles[] = INCBIN_U16("assets/graphics.bin", 0x7E74, 0xC0);
+static const u16 sPalette[] = INCBIN_U16("assets/graphics.bin", 0x7F34, 0x20);
+static const u16 sTilemap[] = INCBIN_U16("assets/graphics.bin", 0x7F54, 0x800);
 
 static const struct WindowTemplate sWindowTemplates[] = {
     {

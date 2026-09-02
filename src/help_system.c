@@ -1646,7 +1646,7 @@ static const u8 *const sHelpSystemSubmenuItemLists[HELPCONTEXT_COUNT * (TOPIC_CO
     NULL,                          NULL,                       NULL,                       NULL,                    NULL  // HELPCONTEXT_UNUSED
 };
 
-static const u16 sUnused[] = INCBIN_U16("graphics/help_system/unused.bin");
+static const u16 sUnused[] = INCBIN_U16("assets/graphics.bin", 0x2202B0, 0x800);
 
 static const u8 sHelpSystemContextTopicOrder[TOPIC_COUNT] = {
     TOPIC_ABOUT_GAME, 

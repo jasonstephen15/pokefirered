@@ -388,43 +388,163 @@ static void InitFlyMap(void);
 static void FreeFlyMap(u8);
 static void SetFlyWarpDestination(u16);
 
-#include "data/region_map/region_map_entry_strings.h"
+// ===== BEGIN src/data/region_map/region_map_entry_strings.h =====
+//
+// DO NOT MODIFY THIS FILE! It is auto-generated from src/data/region_map/region_map_sections.json and Inja template src/data/region_map/region_map_sections.strings.json.txt
+//
 
-static const u16 sTopBar_Pal[] = INCBIN_U16("graphics/region_map/top_bar.gbapal"); // Palette for the top bar and dynamic text color
-static const u16 sMapCursor_Pal[] = INCBIN_U16("graphics/region_map/cursor.gbapal");
-static const u16 sPlayerIcon_RedPal[] = INCBIN_U16("graphics/region_map/player_icon_red.gbapal");
-static const u16 sPlayerIcon_LeafPal[] = INCBIN_U16("graphics/region_map/player_icon_leaf.gbapal");
-static const u16 sMiscIcon_Pal[] = INCBIN_U16("graphics/region_map/misc_icon.gbapal"); // For dungeon and fly icons
-static const u16 sRegionMap_Pal[] = INCBIN_U16("graphics/region_map/region_map.gbapal");
+#ifndef GUARD_DATA_REGION_MAP_REGION_MAP_ENTRY_STRINGS_H
+#define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRY_STRINGS_H
+
+
+static const u8 sMapsecName_PALLET_TOWN[] = _("PALLET TOWN");
+static const u8 sMapsecName_VIRIDIAN_CITY[] = _("VIRIDIAN CITY");
+static const u8 sMapsecName_PEWTER_CITY[] = _("PEWTER CITY");
+static const u8 sMapsecName_CERULEAN_CITY[] = _("CERULEAN CITY");
+static const u8 sMapsecName_LAVENDER_TOWN[] = _("LAVENDER TOWN");
+static const u8 sMapsecName_VERMILION_CITY[] = _("VERMILION CITY");
+static const u8 sMapsecName_CELADON_CITY[] = _("CELADON CITY");
+static const u8 sMapsecName_FUCHSIA_CITY[] = _("FUCHSIA CITY");
+static const u8 sMapsecName_CINNABAR_ISLAND[] = _("CINNABAR ISLAND");
+static const u8 sMapsecName_INDIGO_PLATEAU[] = _("INDIGO PLATEAU");
+static const u8 sMapsecName_SAFFRON_CITY[] = _("SAFFRON CITY");
+static const u8 sMapsecName_ROUTE_4_Clone[] = _("ROUTE 4");
+static const u8 sMapsecName_ROUTE_10_Clone[] = _("ROUTE 10");
+static const u8 sMapsecName_ROUTE_1[] = _("ROUTE 1");
+static const u8 sMapsecName_ROUTE_2[] = _("ROUTE 2");
+static const u8 sMapsecName_ROUTE_3[] = _("ROUTE 3");
+static const u8 sMapsecName_ROUTE_4[] = _("ROUTE 4");
+static const u8 sMapsecName_ROUTE_5[] = _("ROUTE 5");
+static const u8 sMapsecName_ROUTE_6[] = _("ROUTE 6");
+static const u8 sMapsecName_ROUTE_7[] = _("ROUTE 7");
+static const u8 sMapsecName_ROUTE_8[] = _("ROUTE 8");
+static const u8 sMapsecName_ROUTE_9[] = _("ROUTE 9");
+static const u8 sMapsecName_ROUTE_10[] = _("ROUTE 10");
+static const u8 sMapsecName_ROUTE_11[] = _("ROUTE 11");
+static const u8 sMapsecName_ROUTE_12[] = _("ROUTE 12");
+static const u8 sMapsecName_ROUTE_13[] = _("ROUTE 13");
+static const u8 sMapsecName_ROUTE_14[] = _("ROUTE 14");
+static const u8 sMapsecName_ROUTE_15[] = _("ROUTE 15");
+static const u8 sMapsecName_ROUTE_16[] = _("ROUTE 16");
+static const u8 sMapsecName_ROUTE_17[] = _("ROUTE 17");
+static const u8 sMapsecName_ROUTE_18[] = _("ROUTE 18");
+static const u8 sMapsecName_ROUTE_19[] = _("ROUTE 19");
+static const u8 sMapsecName_ROUTE_20[] = _("ROUTE 20");
+static const u8 sMapsecName_ROUTE_21[] = _("ROUTE 21");
+static const u8 sMapsecName_ROUTE_22[] = _("ROUTE 22");
+static const u8 sMapsecName_ROUTE_23[] = _("ROUTE 23");
+static const u8 sMapsecName_ROUTE_24[] = _("ROUTE 24");
+static const u8 sMapsecName_ROUTE_25[] = _("ROUTE 25");
+static const u8 sMapsecName_VIRIDIAN_FOREST[] = _("VIRIDIAN FOREST");
+static const u8 sMapsecName_MT__MOON[] = _("MT. MOON");
+static const u8 sMapsecName_S_S__ANNE[] = _("S.S. ANNE");
+static const u8 sMapsecName_UNDERGROUND_PATH[] = _("UNDERGROUND PATH");
+static const u8 sMapsecName_UNDERGROUND_PATH_Clone[] = _("UNDERGROUND PATH");
+static const u8 sMapsecName_DIGLETT_S_CAVE[] = _("DIGLETT'S CAVE");
+static const u8 sMapsecName_VICTORY_ROAD[] = _("VICTORY ROAD");
+static const u8 sMapsecName_ROCKET_HIDEOUT[] = _("ROCKET HIDEOUT");
+static const u8 sMapsecName_SILPH_CO_[] = _("SILPH CO.");
+static const u8 sMapsecName_POK__MON_MANSION[] = _("POKéMON MANSION");
+static const u8 sMapsecName_SAFARI_ZONE[] = _("SAFARI ZONE");
+static const u8 sMapsecName_POK__MON_LEAGUE[] = _("POKéMON LEAGUE");
+static const u8 sMapsecName_ROCK_TUNNEL[] = _("ROCK TUNNEL");
+static const u8 sMapsecName_SEAFOAM_ISLANDS[] = _("SEAFOAM ISLANDS");
+static const u8 sMapsecName_POK__MON_TOWER[] = _("POKéMON TOWER");
+static const u8 sMapsecName_CERULEAN_CAVE[] = _("CERULEAN CAVE");
+static const u8 sMapsecName_POWER_PLANT[] = _("POWER PLANT");
+static const u8 sMapsecName_ONE_ISLAND[] = _("ONE ISLAND");
+static const u8 sMapsecName_TWO_ISLAND[] = _("TWO ISLAND");
+static const u8 sMapsecName_THREE_ISLAND[] = _("THREE ISLAND");
+static const u8 sMapsecName_FOUR_ISLAND[] = _("FOUR ISLAND");
+static const u8 sMapsecName_FIVE_ISLAND[] = _("FIVE ISLAND");
+static const u8 sMapsecName_SEVEN_ISLAND[] = _("SEVEN ISLAND");
+static const u8 sMapsecName_SIX_ISLAND[] = _("SIX ISLAND");
+static const u8 sMapsecName_KINDLE_ROAD[] = _("KINDLE ROAD");
+static const u8 sMapsecName_TREASURE_BEACH[] = _("TREASURE BEACH");
+static const u8 sMapsecName_CAPE_BRINK[] = _("CAPE BRINK");
+static const u8 sMapsecName_BOND_BRIDGE[] = _("BOND BRIDGE");
+static const u8 sMapsecName_THREE_ISLE_PORT[] = _("THREE ISLE PORT");
+static const u8 sMapsecName_SEVII_ISLE_6[] = _("SEVII ISLE 6");
+static const u8 sMapsecName_SEVII_ISLE_7[] = _("SEVII ISLE 7");
+static const u8 sMapsecName_SEVII_ISLE_8[] = _("SEVII ISLE 8");
+static const u8 sMapsecName_SEVII_ISLE_9[] = _("SEVII ISLE 9");
+static const u8 sMapsecName_RESORT_GORGEOUS[] = _("RESORT GORGEOUS");
+static const u8 sMapsecName_WATER_LABYRINTH[] = _("WATER LABYRINTH");
+static const u8 sMapsecName_FIVE_ISLE_MEADOW[] = _("FIVE ISLE MEADOW");
+static const u8 sMapsecName_MEMORIAL_PILLAR[] = _("MEMORIAL PILLAR");
+static const u8 sMapsecName_OUTCAST_ISLAND[] = _("OUTCAST ISLAND");
+static const u8 sMapsecName_GREEN_PATH[] = _("GREEN PATH");
+static const u8 sMapsecName_WATER_PATH[] = _("WATER PATH");
+static const u8 sMapsecName_RUIN_VALLEY[] = _("RUIN VALLEY");
+static const u8 sMapsecName_TRAINER_TOWER[] = _("TRAINER TOWER");
+static const u8 sMapsecName_CANYON_ENTRANCE[] = _("CANYON ENTRANCE");
+static const u8 sMapsecName_SEVAULT_CANYON[] = _("SEVAULT CANYON");
+static const u8 sMapsecName_TANOBY_RUINS[] = _("TANOBY RUINS");
+static const u8 sMapsecName_SEVII_ISLE_22[] = _("SEVII ISLE 22");
+static const u8 sMapsecName_SEVII_ISLE_23[] = _("SEVII ISLE 23");
+static const u8 sMapsecName_SEVII_ISLE_24[] = _("SEVII ISLE 24");
+static const u8 sMapsecName_NAVEL_ROCK[] = _("NAVEL ROCK");
+static const u8 sMapsecName_MT__EMBER[] = _("MT. EMBER");
+static const u8 sMapsecName_BERRY_FOREST[] = _("BERRY FOREST");
+static const u8 sMapsecName_ICEFALL_CAVE[] = _("ICEFALL CAVE");
+static const u8 sMapsecName_ROCKET_WAREHOUSE[] = _("ROCKET WAREHOUSE");
+static const u8 sMapsecName_TRAINER_TOWER_Clone[] = _("TRAINER TOWER");
+static const u8 sMapsecName_DOTTED_HOLE[] = _("DOTTED HOLE");
+static const u8 sMapsecName_LOST_CAVE[] = _("LOST CAVE");
+static const u8 sMapsecName_PATTERN_BUSH[] = _("PATTERN BUSH");
+static const u8 sMapsecName_ALTERING_CAVE[] = _("ALTERING CAVE");
+static const u8 sMapsecName_TANOBY_CHAMBERS[] = _("TANOBY CHAMBERS");
+static const u8 sMapsecName_THREE_ISLE_PATH[] = _("THREE ISLE PATH");
+static const u8 sMapsecName_TANOBY_KEY[] = _("TANOBY KEY");
+static const u8 sMapsecName_BIRTH_ISLAND[] = _("BIRTH ISLAND");
+static const u8 sMapsecName_MONEAN_CHAMBER[] = _("MONEAN CHAMBER");
+static const u8 sMapsecName_LIPTOO_CHAMBER[] = _("LIPTOO CHAMBER");
+static const u8 sMapsecName_WEEPTH_CHAMBER[] = _("WEEPTH CHAMBER");
+static const u8 sMapsecName_DILFORD_CHAMBER[] = _("DILFORD CHAMBER");
+static const u8 sMapsecName_SCUFIB_CHAMBER[] = _("SCUFIB CHAMBER");
+static const u8 sMapsecName_RIXY_CHAMBER[] = _("RIXY CHAMBER");
+static const u8 sMapsecName_VIAPOIS_CHAMBER[] = _("VIAPOIS CHAMBER");
+static const u8 sMapsecName_EMBER_SPA[] = _("EMBER SPA");
+static const u8 sMapsecName_CELADON_DEPT_[] = _("CELADON DEPT.");
+
+#endif // GUARD_DATA_REGION_MAP_REGION_MAP_ENTRY_STRINGS_H
+// ===== END src/data/region_map/region_map_entry_strings.h =====
+
+static const u16 sTopBar_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25F44C, 0x20); // Palette for the top bar and dynamic text color
+static const u16 sMapCursor_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25F46C, 0x20);
+static const u16 sPlayerIcon_RedPal[] = INCBIN_U16("assets/graphics.bin", 0x25F48C, 0x20);
+static const u16 sPlayerIcon_LeafPal[] = INCBIN_U16("assets/graphics.bin", 0x25F4AC, 0x20);
+static const u16 sMiscIcon_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25F4CC, 0x20); // For dungeon and fly icons
+static const u16 sRegionMap_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25F4EC, 0xA0);
 static const u16 sUnusedPalette[] = { RGB(0, 0, 31), RGB(0, 12, 31), RGB_WHITE, RGB_WHITE };
-static const u16 sSwitchMapCursor_Pal[] = INCBIN_U16("graphics/region_map/switch_map_cursor.gbapal");
-static const u16 sMapEdge_Pal[] = INCBIN_U16("graphics/region_map/map_edge.gbapal");
-static const u32 sSwitchMapCursorLeft_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_cursor_left.4bpp.lz");
-static const u32 sSwitchMapCursorRight_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_cursor_right.4bpp.lz");
-static const u32 sMapCursor_Gfx[] = INCBIN_U32("graphics/region_map/cursor.4bpp.lz");
-static const u32 sPlayerIcon_Red[] = INCBIN_U32("graphics/region_map/player_icon_red.4bpp.lz");
-static const u32 sPlayerIcon_Leaf[] = INCBIN_U32("graphics/region_map/player_icon_leaf.4bpp.lz");
-static const u32 sRegionMap_Gfx[] = INCBIN_U32("graphics/region_map/region_map.4bpp.lz");
-static const u32 sMapEdge_Gfx[] = INCBIN_U32("graphics/region_map/map_edge.4bpp.lz");
-static const u32 sSwitchMapMenu_Gfx[] = INCBIN_U32("graphics/region_map/switch_map_menu.4bpp.lz");
-static const u32 sKanto_Tilemap[] = INCBIN_U32("graphics/region_map/kanto.bin.lz");
-static const u32 sSevii123_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_123.bin.lz");
-static const u32 sSevii45_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_45.bin.lz");
-static const u32 sSevii67_Tilemap[] = INCBIN_U32("graphics/region_map/sevii_67.bin.lz");
-static const u32 sMapEdge_Tilemap[] = INCBIN_U32("graphics/region_map/map_edge.bin.lz");
-static const u32 sSwitchMap_KantoSeviiAll_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_all.bin.lz");
-static const u32 sSwitchMap_KantoSevii123_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_123.bin.lz");
-static const u32 sSwitchMap_KantoSeviiAll2_Tilemap[] = INCBIN_U32("graphics/region_map/switch_map_kanto_sevii_all2.bin.lz");
-static const u32 sMapEdge_TopLeft[] = INCBIN_U32("graphics/region_map/map_edge_top_left.4bpp.lz");
-static const u32 sMapEdge_TopRight[] = INCBIN_U32("graphics/region_map/map_edge_top_right.4bpp.lz");
-static const u32 sMapEdge_MidLeft[] = INCBIN_U32("graphics/region_map/map_edge_mid_left.4bpp.lz");
-static const u32 sMapEdge_MidRight[] = INCBIN_U32("graphics/region_map/map_edge_mid_right.4bpp.lz");
-static const u32 sMapEdge_BottomLeft[] = INCBIN_U32("graphics/region_map/map_edge_bottom_left.4bpp.lz");
-static const u32 sMapEdge_BottomRight[] = INCBIN_U32("graphics/region_map/map_edge_bottom_right.4bpp.lz");
-static const u32 sDungeonIcon[] = INCBIN_U32("graphics/region_map/dungeon_icon.4bpp.lz");
-static const u32 sFlyIcon[] = INCBIN_U32("graphics/region_map/fly_icon.4bpp.lz");
-static const u32 sBackground_Gfx[] = INCBIN_U32("graphics/region_map/background.4bpp.lz");
-static const u32 sBackground_Tilemap[] = INCBIN_U32("graphics/region_map/background.bin.lz");
+static const u16 sSwitchMapCursor_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25F58C, 0x20);
+static const u16 sMapEdge_Pal[] = INCBIN_U16("assets/graphics.bin", 0x25F5AC, 0x20);
+static const u32 sSwitchMapCursorLeft_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x25F5CC, 0x8C);
+static const u32 sSwitchMapCursorRight_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x25F658, 0x90);
+static const u32 sMapCursor_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x25F6E8, 0x44);
+static const u32 sPlayerIcon_Red[] = INCBIN_U32("assets/graphics.bin", 0x25F72C, 0x78);
+static const u32 sPlayerIcon_Leaf[] = INCBIN_U32("assets/graphics.bin", 0x25F7A4, 0x80);
+static const u32 sRegionMap_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x25F824, 0xD14);
+static const u32 sMapEdge_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x260538, 0x250);
+static const u32 sSwitchMapMenu_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x260788, 0x31C);
+static const u32 sKanto_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x260AA4, 0x260);
+static const u32 sSevii123_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x260D04, 0x110);
+static const u32 sSevii45_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x260E14, 0xE4);
+static const u32 sSevii67_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x260EF8, 0x11C);
+static const u32 sMapEdge_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x261014, 0x110);
+static const u32 sSwitchMap_KantoSeviiAll_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x261124, 0x168);
+static const u32 sSwitchMap_KantoSevii123_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x26128C, 0x10C);
+static const u32 sSwitchMap_KantoSeviiAll2_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x261398, 0x13C);
+static const u32 sMapEdge_TopLeft[] = INCBIN_U32("assets/graphics.bin", 0x2614D4, 0x120);
+static const u32 sMapEdge_TopRight[] = INCBIN_U32("assets/graphics.bin", 0x2615F4, 0x164);
+static const u32 sMapEdge_MidLeft[] = INCBIN_U32("assets/graphics.bin", 0x261758, 0xF0);
+static const u32 sMapEdge_MidRight[] = INCBIN_U32("assets/graphics.bin", 0x261848, 0xF8);
+static const u32 sMapEdge_BottomLeft[] = INCBIN_U32("assets/graphics.bin", 0x261940, 0xCC);
+static const u32 sMapEdge_BottomRight[] = INCBIN_U32("assets/graphics.bin", 0x261A0C, 0xD4);
+static const u32 sDungeonIcon[] = INCBIN_U32("assets/graphics.bin", 0x261AE0, 0x30);
+static const u32 sFlyIcon[] = INCBIN_U32("assets/graphics.bin", 0x261B10, 0x70);
+static const u32 sBackground_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x261B80, 0x28);
+static const u32 sBackground_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x261BA8, 0xB0);
 
 static const struct BgTemplate sRegionMapBgTemplates[] = {
     {
@@ -818,12 +938,514 @@ static const u8 sWinRegs[][2] = {
 
 static const u8 sTextColors[] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 
-#include "data/region_map/region_map_entries.h"
+// ===== BEGIN src/data/region_map/region_map_entries.h =====
+//
+// DO NOT MODIFY THIS FILE! It is auto-generated from src/data/region_map/region_map_sections.json and Inja template src/data/region_map/region_map_sections.entries.json.txt
+//
 
-#include "data/region_map/region_map_layout_kanto.h"
-#include "data/region_map/region_map_layout_sevii_123.h"
-#include "data/region_map/region_map_layout_sevii_45.h"
-#include "data/region_map/region_map_layout_sevii_67.h"
+#ifndef GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
+#define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
+
+
+static const u8 *const sMapNames[] = {
+    [MAPSEC_PALLET_TOWN - KANTO_MAPSEC_START] = sMapsecName_PALLET_TOWN,
+    [MAPSEC_VIRIDIAN_CITY - KANTO_MAPSEC_START] = sMapsecName_VIRIDIAN_CITY,
+    [MAPSEC_PEWTER_CITY - KANTO_MAPSEC_START] = sMapsecName_PEWTER_CITY,
+    [MAPSEC_CERULEAN_CITY - KANTO_MAPSEC_START] = sMapsecName_CERULEAN_CITY,
+    [MAPSEC_LAVENDER_TOWN - KANTO_MAPSEC_START] = sMapsecName_LAVENDER_TOWN,
+    [MAPSEC_VERMILION_CITY - KANTO_MAPSEC_START] = sMapsecName_VERMILION_CITY,
+    [MAPSEC_CELADON_CITY - KANTO_MAPSEC_START] = sMapsecName_CELADON_CITY,
+    [MAPSEC_FUCHSIA_CITY - KANTO_MAPSEC_START] = sMapsecName_FUCHSIA_CITY,
+    [MAPSEC_CINNABAR_ISLAND - KANTO_MAPSEC_START] = sMapsecName_CINNABAR_ISLAND,
+    [MAPSEC_INDIGO_PLATEAU - KANTO_MAPSEC_START] = sMapsecName_INDIGO_PLATEAU,
+    [MAPSEC_SAFFRON_CITY - KANTO_MAPSEC_START] = sMapsecName_SAFFRON_CITY,
+    [MAPSEC_ROUTE_4_POKECENTER - KANTO_MAPSEC_START] = sMapsecName_ROUTE_4_Clone,
+    [MAPSEC_ROUTE_10_POKECENTER - KANTO_MAPSEC_START] = sMapsecName_ROUTE_10_Clone,
+    [MAPSEC_ROUTE_1 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_1,
+    [MAPSEC_ROUTE_2 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_2,
+    [MAPSEC_ROUTE_3 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_3,
+    [MAPSEC_ROUTE_4 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_4,
+    [MAPSEC_ROUTE_5 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_5,
+    [MAPSEC_ROUTE_6 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_6,
+    [MAPSEC_ROUTE_7 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_7,
+    [MAPSEC_ROUTE_8 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_8,
+    [MAPSEC_ROUTE_9 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_9,
+    [MAPSEC_ROUTE_10 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_10,
+    [MAPSEC_ROUTE_11 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_11,
+    [MAPSEC_ROUTE_12 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_12,
+    [MAPSEC_ROUTE_13 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_13,
+    [MAPSEC_ROUTE_14 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_14,
+    [MAPSEC_ROUTE_15 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_15,
+    [MAPSEC_ROUTE_16 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_16,
+    [MAPSEC_ROUTE_17 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_17,
+    [MAPSEC_ROUTE_18 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_18,
+    [MAPSEC_ROUTE_19 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_19,
+    [MAPSEC_ROUTE_20 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_20,
+    [MAPSEC_ROUTE_21 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_21,
+    [MAPSEC_ROUTE_22 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_22,
+    [MAPSEC_ROUTE_23 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_23,
+    [MAPSEC_ROUTE_24 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_24,
+    [MAPSEC_ROUTE_25 - KANTO_MAPSEC_START] = sMapsecName_ROUTE_25,
+    [MAPSEC_VIRIDIAN_FOREST - KANTO_MAPSEC_START] = sMapsecName_VIRIDIAN_FOREST,
+    [MAPSEC_MT_MOON - KANTO_MAPSEC_START] = sMapsecName_MT__MOON,
+    [MAPSEC_S_S_ANNE - KANTO_MAPSEC_START] = sMapsecName_S_S__ANNE,
+    [MAPSEC_UNDERGROUND_PATH - KANTO_MAPSEC_START] = sMapsecName_UNDERGROUND_PATH,
+    [MAPSEC_UNDERGROUND_PATH_2 - KANTO_MAPSEC_START] = sMapsecName_UNDERGROUND_PATH_Clone,
+    [MAPSEC_DIGLETTS_CAVE - KANTO_MAPSEC_START] = sMapsecName_DIGLETT_S_CAVE,
+    [MAPSEC_KANTO_VICTORY_ROAD - KANTO_MAPSEC_START] = sMapsecName_VICTORY_ROAD,
+    [MAPSEC_ROCKET_HIDEOUT - KANTO_MAPSEC_START] = sMapsecName_ROCKET_HIDEOUT,
+    [MAPSEC_SILPH_CO - KANTO_MAPSEC_START] = sMapsecName_SILPH_CO_,
+    [MAPSEC_POKEMON_MANSION - KANTO_MAPSEC_START] = sMapsecName_POK__MON_MANSION,
+    [MAPSEC_KANTO_SAFARI_ZONE - KANTO_MAPSEC_START] = sMapsecName_SAFARI_ZONE,
+    [MAPSEC_POKEMON_LEAGUE - KANTO_MAPSEC_START] = sMapsecName_POK__MON_LEAGUE,
+    [MAPSEC_ROCK_TUNNEL - KANTO_MAPSEC_START] = sMapsecName_ROCK_TUNNEL,
+    [MAPSEC_SEAFOAM_ISLANDS - KANTO_MAPSEC_START] = sMapsecName_SEAFOAM_ISLANDS,
+    [MAPSEC_POKEMON_TOWER - KANTO_MAPSEC_START] = sMapsecName_POK__MON_TOWER,
+    [MAPSEC_CERULEAN_CAVE - KANTO_MAPSEC_START] = sMapsecName_CERULEAN_CAVE,
+    [MAPSEC_POWER_PLANT - KANTO_MAPSEC_START] = sMapsecName_POWER_PLANT,
+    [MAPSEC_ONE_ISLAND - KANTO_MAPSEC_START] = sMapsecName_ONE_ISLAND,
+    [MAPSEC_TWO_ISLAND - KANTO_MAPSEC_START] = sMapsecName_TWO_ISLAND,
+    [MAPSEC_THREE_ISLAND - KANTO_MAPSEC_START] = sMapsecName_THREE_ISLAND,
+    [MAPSEC_FOUR_ISLAND - KANTO_MAPSEC_START] = sMapsecName_FOUR_ISLAND,
+    [MAPSEC_FIVE_ISLAND - KANTO_MAPSEC_START] = sMapsecName_FIVE_ISLAND,
+    [MAPSEC_SEVEN_ISLAND - KANTO_MAPSEC_START] = sMapsecName_SEVEN_ISLAND,
+    [MAPSEC_SIX_ISLAND - KANTO_MAPSEC_START] = sMapsecName_SIX_ISLAND,
+    [MAPSEC_KINDLE_ROAD - KANTO_MAPSEC_START] = sMapsecName_KINDLE_ROAD,
+    [MAPSEC_TREASURE_BEACH - KANTO_MAPSEC_START] = sMapsecName_TREASURE_BEACH,
+    [MAPSEC_CAPE_BRINK - KANTO_MAPSEC_START] = sMapsecName_CAPE_BRINK,
+    [MAPSEC_BOND_BRIDGE - KANTO_MAPSEC_START] = sMapsecName_BOND_BRIDGE,
+    [MAPSEC_THREE_ISLE_PORT - KANTO_MAPSEC_START] = sMapsecName_THREE_ISLE_PORT,
+    [MAPSEC_SEVII_ISLE_6 - KANTO_MAPSEC_START] = sMapsecName_SEVII_ISLE_6,
+    [MAPSEC_SEVII_ISLE_7 - KANTO_MAPSEC_START] = sMapsecName_SEVII_ISLE_7,
+    [MAPSEC_SEVII_ISLE_8 - KANTO_MAPSEC_START] = sMapsecName_SEVII_ISLE_8,
+    [MAPSEC_SEVII_ISLE_9 - KANTO_MAPSEC_START] = sMapsecName_SEVII_ISLE_9,
+    [MAPSEC_RESORT_GORGEOUS - KANTO_MAPSEC_START] = sMapsecName_RESORT_GORGEOUS,
+    [MAPSEC_WATER_LABYRINTH - KANTO_MAPSEC_START] = sMapsecName_WATER_LABYRINTH,
+    [MAPSEC_FIVE_ISLE_MEADOW - KANTO_MAPSEC_START] = sMapsecName_FIVE_ISLE_MEADOW,
+    [MAPSEC_MEMORIAL_PILLAR - KANTO_MAPSEC_START] = sMapsecName_MEMORIAL_PILLAR,
+    [MAPSEC_OUTCAST_ISLAND - KANTO_MAPSEC_START] = sMapsecName_OUTCAST_ISLAND,
+    [MAPSEC_GREEN_PATH - KANTO_MAPSEC_START] = sMapsecName_GREEN_PATH,
+    [MAPSEC_WATER_PATH - KANTO_MAPSEC_START] = sMapsecName_WATER_PATH,
+    [MAPSEC_RUIN_VALLEY - KANTO_MAPSEC_START] = sMapsecName_RUIN_VALLEY,
+    [MAPSEC_TRAINER_TOWER - KANTO_MAPSEC_START] = sMapsecName_TRAINER_TOWER,
+    [MAPSEC_CANYON_ENTRANCE - KANTO_MAPSEC_START] = sMapsecName_CANYON_ENTRANCE,
+    [MAPSEC_SEVAULT_CANYON - KANTO_MAPSEC_START] = sMapsecName_SEVAULT_CANYON,
+    [MAPSEC_TANOBY_RUINS - KANTO_MAPSEC_START] = sMapsecName_TANOBY_RUINS,
+    [MAPSEC_SEVII_ISLE_22 - KANTO_MAPSEC_START] = sMapsecName_SEVII_ISLE_22,
+    [MAPSEC_SEVII_ISLE_23 - KANTO_MAPSEC_START] = sMapsecName_SEVII_ISLE_23,
+    [MAPSEC_SEVII_ISLE_24 - KANTO_MAPSEC_START] = sMapsecName_SEVII_ISLE_24,
+    [MAPSEC_NAVEL_ROCK - KANTO_MAPSEC_START] = sMapsecName_NAVEL_ROCK,
+    [MAPSEC_MT_EMBER - KANTO_MAPSEC_START] = sMapsecName_MT__EMBER,
+    [MAPSEC_BERRY_FOREST - KANTO_MAPSEC_START] = sMapsecName_BERRY_FOREST,
+    [MAPSEC_ICEFALL_CAVE - KANTO_MAPSEC_START] = sMapsecName_ICEFALL_CAVE,
+    [MAPSEC_ROCKET_WAREHOUSE - KANTO_MAPSEC_START] = sMapsecName_ROCKET_WAREHOUSE,
+    [MAPSEC_TRAINER_TOWER_2 - KANTO_MAPSEC_START] = sMapsecName_TRAINER_TOWER_Clone,
+    [MAPSEC_DOTTED_HOLE - KANTO_MAPSEC_START] = sMapsecName_DOTTED_HOLE,
+    [MAPSEC_LOST_CAVE - KANTO_MAPSEC_START] = sMapsecName_LOST_CAVE,
+    [MAPSEC_PATTERN_BUSH - KANTO_MAPSEC_START] = sMapsecName_PATTERN_BUSH,
+    [MAPSEC_ALTERING_CAVE - KANTO_MAPSEC_START] = sMapsecName_ALTERING_CAVE,
+    [MAPSEC_TANOBY_CHAMBERS - KANTO_MAPSEC_START] = sMapsecName_TANOBY_CHAMBERS,
+    [MAPSEC_THREE_ISLE_PATH - KANTO_MAPSEC_START] = sMapsecName_THREE_ISLE_PATH,
+    [MAPSEC_TANOBY_KEY - KANTO_MAPSEC_START] = sMapsecName_TANOBY_KEY,
+    [MAPSEC_BIRTH_ISLAND - KANTO_MAPSEC_START] = sMapsecName_BIRTH_ISLAND,
+    [MAPSEC_MONEAN_CHAMBER - KANTO_MAPSEC_START] = sMapsecName_MONEAN_CHAMBER,
+    [MAPSEC_LIPTOO_CHAMBER - KANTO_MAPSEC_START] = sMapsecName_LIPTOO_CHAMBER,
+    [MAPSEC_WEEPTH_CHAMBER - KANTO_MAPSEC_START] = sMapsecName_WEEPTH_CHAMBER,
+    [MAPSEC_DILFORD_CHAMBER - KANTO_MAPSEC_START] = sMapsecName_DILFORD_CHAMBER,
+    [MAPSEC_SCUFIB_CHAMBER - KANTO_MAPSEC_START] = sMapsecName_SCUFIB_CHAMBER,
+    [MAPSEC_RIXY_CHAMBER - KANTO_MAPSEC_START] = sMapsecName_RIXY_CHAMBER,
+    [MAPSEC_VIAPOIS_CHAMBER - KANTO_MAPSEC_START] = sMapsecName_VIAPOIS_CHAMBER,
+    [MAPSEC_EMBER_SPA - KANTO_MAPSEC_START] = sMapsecName_EMBER_SPA,
+    [MAPSEC_SPECIAL_AREA - KANTO_MAPSEC_START] = sMapsecName_CELADON_DEPT_,
+};
+
+static const u16 sMapSectionTopLeftCorners[MAPSEC_COUNT][2] = {
+    [MAPSEC_PALLET_TOWN - KANTO_MAPSEC_START] = { 4, 11 },
+    [MAPSEC_VIRIDIAN_CITY - KANTO_MAPSEC_START] = { 4, 8 },
+    [MAPSEC_PEWTER_CITY - KANTO_MAPSEC_START] = { 4, 4 },
+    [MAPSEC_CERULEAN_CITY - KANTO_MAPSEC_START] = { 14, 3 },
+    [MAPSEC_LAVENDER_TOWN - KANTO_MAPSEC_START] = { 18, 6 },
+    [MAPSEC_VERMILION_CITY - KANTO_MAPSEC_START] = { 14, 9 },
+    [MAPSEC_CELADON_CITY - KANTO_MAPSEC_START] = { 11, 6 },
+    [MAPSEC_FUCHSIA_CITY - KANTO_MAPSEC_START] = { 12, 12 },
+    [MAPSEC_CINNABAR_ISLAND - KANTO_MAPSEC_START] = { 4, 14 },
+    [MAPSEC_INDIGO_PLATEAU - KANTO_MAPSEC_START] = { 2, 3 },
+    [MAPSEC_SAFFRON_CITY - KANTO_MAPSEC_START] = { 14, 6 },
+    [MAPSEC_ROUTE_4_POKECENTER - KANTO_MAPSEC_START] = { 8, 3 },
+    [MAPSEC_ROUTE_10_POKECENTER - KANTO_MAPSEC_START] = { 18, 3 },
+    [MAPSEC_ROUTE_1 - KANTO_MAPSEC_START] = { 4, 9 },
+    [MAPSEC_ROUTE_2 - KANTO_MAPSEC_START] = { 4, 5 },
+    [MAPSEC_ROUTE_3 - KANTO_MAPSEC_START] = { 5, 4 },
+    [MAPSEC_ROUTE_4 - KANTO_MAPSEC_START] = { 8, 3 },
+    [MAPSEC_ROUTE_5 - KANTO_MAPSEC_START] = { 14, 4 },
+    [MAPSEC_ROUTE_6 - KANTO_MAPSEC_START] = { 14, 7 },
+    [MAPSEC_ROUTE_7 - KANTO_MAPSEC_START] = { 12, 6 },
+    [MAPSEC_ROUTE_8 - KANTO_MAPSEC_START] = { 15, 6 },
+    [MAPSEC_ROUTE_9 - KANTO_MAPSEC_START] = { 15, 3 },
+    [MAPSEC_ROUTE_10 - KANTO_MAPSEC_START] = { 18, 3 },
+    [MAPSEC_ROUTE_11 - KANTO_MAPSEC_START] = { 15, 9 },
+    [MAPSEC_ROUTE_12 - KANTO_MAPSEC_START] = { 18, 7 },
+    [MAPSEC_ROUTE_13 - KANTO_MAPSEC_START] = { 16, 11 },
+    [MAPSEC_ROUTE_14 - KANTO_MAPSEC_START] = { 15, 11 },
+    [MAPSEC_ROUTE_15 - KANTO_MAPSEC_START] = { 13, 12 },
+    [MAPSEC_ROUTE_16 - KANTO_MAPSEC_START] = { 7, 6 },
+    [MAPSEC_ROUTE_17 - KANTO_MAPSEC_START] = { 7, 7 },
+    [MAPSEC_ROUTE_18 - KANTO_MAPSEC_START] = { 7, 12 },
+    [MAPSEC_ROUTE_19 - KANTO_MAPSEC_START] = { 12, 13 },
+    [MAPSEC_ROUTE_20 - KANTO_MAPSEC_START] = { 5, 14 },
+    [MAPSEC_ROUTE_21 - KANTO_MAPSEC_START] = { 4, 12 },
+    [MAPSEC_ROUTE_22 - KANTO_MAPSEC_START] = { 2, 8 },
+    [MAPSEC_ROUTE_23 - KANTO_MAPSEC_START] = { 2, 4 },
+    [MAPSEC_ROUTE_24 - KANTO_MAPSEC_START] = { 14, 1 },
+    [MAPSEC_ROUTE_25 - KANTO_MAPSEC_START] = { 15, 1 },
+    [MAPSEC_VIRIDIAN_FOREST - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_MT_MOON - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_S_S_ANNE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_UNDERGROUND_PATH - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_UNDERGROUND_PATH_2 - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_DIGLETTS_CAVE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_KANTO_VICTORY_ROAD - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_ROCKET_HIDEOUT - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_SILPH_CO - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_POKEMON_MANSION - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_KANTO_SAFARI_ZONE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_POKEMON_LEAGUE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_ROCK_TUNNEL - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_SEAFOAM_ISLANDS - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_POKEMON_TOWER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_CERULEAN_CAVE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_POWER_PLANT - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_ONE_ISLAND - KANTO_MAPSEC_START] = { 1, 8 },
+    [MAPSEC_TWO_ISLAND - KANTO_MAPSEC_START] = { 9, 9 },
+    [MAPSEC_THREE_ISLAND - KANTO_MAPSEC_START] = { 18, 12 },
+    [MAPSEC_FOUR_ISLAND - KANTO_MAPSEC_START] = { 3, 4 },
+    [MAPSEC_FIVE_ISLAND - KANTO_MAPSEC_START] = { 16, 11 },
+    [MAPSEC_SEVEN_ISLAND - KANTO_MAPSEC_START] = { 5, 8 },
+    [MAPSEC_SIX_ISLAND - KANTO_MAPSEC_START] = { 17, 5 },
+    [MAPSEC_KINDLE_ROAD - KANTO_MAPSEC_START] = { 2, 3 },
+    [MAPSEC_TREASURE_BEACH - KANTO_MAPSEC_START] = { 1, 9 },
+    [MAPSEC_CAPE_BRINK - KANTO_MAPSEC_START] = { 9, 7 },
+    [MAPSEC_BOND_BRIDGE - KANTO_MAPSEC_START] = { 13, 12 },
+    [MAPSEC_THREE_ISLE_PORT - KANTO_MAPSEC_START] = { 18, 13 },
+    [MAPSEC_SEVII_ISLE_6 - KANTO_MAPSEC_START] = { 4, 3 },
+    [MAPSEC_SEVII_ISLE_7 - KANTO_MAPSEC_START] = { 5, 4 },
+    [MAPSEC_SEVII_ISLE_8 - KANTO_MAPSEC_START] = { 1, 4 },
+    [MAPSEC_SEVII_ISLE_9 - KANTO_MAPSEC_START] = { 4, 5 },
+    [MAPSEC_RESORT_GORGEOUS - KANTO_MAPSEC_START] = { 16, 9 },
+    [MAPSEC_WATER_LABYRINTH - KANTO_MAPSEC_START] = { 14, 10 },
+    [MAPSEC_FIVE_ISLE_MEADOW - KANTO_MAPSEC_START] = { 17, 10 },
+    [MAPSEC_MEMORIAL_PILLAR - KANTO_MAPSEC_START] = { 18, 12 },
+    [MAPSEC_OUTCAST_ISLAND - KANTO_MAPSEC_START] = { 15, 0 },
+    [MAPSEC_GREEN_PATH - KANTO_MAPSEC_START] = { 15, 3 },
+    [MAPSEC_WATER_PATH - KANTO_MAPSEC_START] = { 18, 3 },
+    [MAPSEC_RUIN_VALLEY - KANTO_MAPSEC_START] = { 16, 7 },
+    [MAPSEC_TRAINER_TOWER - KANTO_MAPSEC_START] = { 5, 6 },
+    [MAPSEC_CANYON_ENTRANCE - KANTO_MAPSEC_START] = { 5, 9 },
+    [MAPSEC_SEVAULT_CANYON - KANTO_MAPSEC_START] = { 6, 9 },
+    [MAPSEC_TANOBY_RUINS - KANTO_MAPSEC_START] = { 3, 12 },
+    [MAPSEC_SEVII_ISLE_22 - KANTO_MAPSEC_START] = { 9, 12 },
+    [MAPSEC_SEVII_ISLE_23 - KANTO_MAPSEC_START] = { 3, 14 },
+    [MAPSEC_SEVII_ISLE_24 - KANTO_MAPSEC_START] = { 2, 12 },
+    [MAPSEC_NAVEL_ROCK - KANTO_MAPSEC_START] = { 10, 8 },
+    [MAPSEC_MT_EMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_BERRY_FOREST - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_ICEFALL_CAVE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_ROCKET_WAREHOUSE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_TRAINER_TOWER_2 - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_DOTTED_HOLE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_LOST_CAVE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_PATTERN_BUSH - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_ALTERING_CAVE - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_TANOBY_CHAMBERS - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_THREE_ISLE_PATH - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_TANOBY_KEY - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_BIRTH_ISLAND - KANTO_MAPSEC_START] = { 18, 13 },
+    [MAPSEC_MONEAN_CHAMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_LIPTOO_CHAMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_WEEPTH_CHAMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_DILFORD_CHAMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_SCUFIB_CHAMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_RIXY_CHAMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_VIAPOIS_CHAMBER - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_EMBER_SPA - KANTO_MAPSEC_START] = { 0, 0 },
+    [MAPSEC_SPECIAL_AREA - KANTO_MAPSEC_START] = { 0, 0 },
+};
+
+static const u16 sMapSectionDimensions[MAPSEC_COUNT][2] = {
+    [MAPSEC_PALLET_TOWN - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_VIRIDIAN_CITY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_PEWTER_CITY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_CERULEAN_CITY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_LAVENDER_TOWN - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_VERMILION_CITY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_CELADON_CITY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_FUCHSIA_CITY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_CINNABAR_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_INDIGO_PLATEAU - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SAFFRON_CITY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ROUTE_4_POKECENTER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ROUTE_10_POKECENTER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ROUTE_1 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_ROUTE_2 - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_ROUTE_3 - KANTO_MAPSEC_START] = { 4, 1 },
+    [MAPSEC_ROUTE_4 - KANTO_MAPSEC_START] = { 6, 1 },
+    [MAPSEC_ROUTE_5 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_ROUTE_6 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_ROUTE_7 - KANTO_MAPSEC_START] = { 2, 1 },
+    [MAPSEC_ROUTE_8 - KANTO_MAPSEC_START] = { 3, 1 },
+    [MAPSEC_ROUTE_9 - KANTO_MAPSEC_START] = { 3, 1 },
+    [MAPSEC_ROUTE_10 - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_ROUTE_11 - KANTO_MAPSEC_START] = { 3, 1 },
+    [MAPSEC_ROUTE_12 - KANTO_MAPSEC_START] = { 1, 5 },
+    [MAPSEC_ROUTE_13 - KANTO_MAPSEC_START] = { 2, 1 },
+    [MAPSEC_ROUTE_14 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_ROUTE_15 - KANTO_MAPSEC_START] = { 2, 1 },
+    [MAPSEC_ROUTE_16 - KANTO_MAPSEC_START] = { 4, 1 },
+    [MAPSEC_ROUTE_17 - KANTO_MAPSEC_START] = { 1, 5 },
+    [MAPSEC_ROUTE_18 - KANTO_MAPSEC_START] = { 5, 1 },
+    [MAPSEC_ROUTE_19 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_ROUTE_20 - KANTO_MAPSEC_START] = { 7, 1 },
+    [MAPSEC_ROUTE_21 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_ROUTE_22 - KANTO_MAPSEC_START] = { 2, 1 },
+    [MAPSEC_ROUTE_23 - KANTO_MAPSEC_START] = { 1, 4 },
+    [MAPSEC_ROUTE_24 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_ROUTE_25 - KANTO_MAPSEC_START] = { 2, 1 },
+    [MAPSEC_VIRIDIAN_FOREST - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_MT_MOON - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_S_S_ANNE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_UNDERGROUND_PATH - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_UNDERGROUND_PATH_2 - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_DIGLETTS_CAVE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_KANTO_VICTORY_ROAD - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ROCKET_HIDEOUT - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SILPH_CO - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_POKEMON_MANSION - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_KANTO_SAFARI_ZONE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_POKEMON_LEAGUE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ROCK_TUNNEL - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SEAFOAM_ISLANDS - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_POKEMON_TOWER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_CERULEAN_CAVE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_POWER_PLANT - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ONE_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_TWO_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_THREE_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_FOUR_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_FIVE_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SEVEN_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SIX_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_KINDLE_ROAD - KANTO_MAPSEC_START] = { 1, 6 },
+    [MAPSEC_TREASURE_BEACH - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_CAPE_BRINK - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_BOND_BRIDGE - KANTO_MAPSEC_START] = { 4, 1 },
+    [MAPSEC_THREE_ISLE_PORT - KANTO_MAPSEC_START] = { 2, 1 },
+    [MAPSEC_SEVII_ISLE_6 - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SEVII_ISLE_7 - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SEVII_ISLE_8 - KANTO_MAPSEC_START] = { 3, 1 },
+    [MAPSEC_SEVII_ISLE_9 - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_RESORT_GORGEOUS - KANTO_MAPSEC_START] = { 3, 1 },
+    [MAPSEC_WATER_LABYRINTH - KANTO_MAPSEC_START] = { 3, 1 },
+    [MAPSEC_FIVE_ISLE_MEADOW - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_MEMORIAL_PILLAR - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_OUTCAST_ISLAND - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_GREEN_PATH - KANTO_MAPSEC_START] = { 3, 1 },
+    [MAPSEC_WATER_PATH - KANTO_MAPSEC_START] = { 1, 5 },
+    [MAPSEC_RUIN_VALLEY - KANTO_MAPSEC_START] = { 2, 2 },
+    [MAPSEC_TRAINER_TOWER - KANTO_MAPSEC_START] = { 1, 2 },
+    [MAPSEC_CANYON_ENTRANCE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SEVAULT_CANYON - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_TANOBY_RUINS - KANTO_MAPSEC_START] = { 7, 1 },
+    [MAPSEC_SEVII_ISLE_22 - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_SEVII_ISLE_23 - KANTO_MAPSEC_START] = { 6, 1 },
+    [MAPSEC_SEVII_ISLE_24 - KANTO_MAPSEC_START] = { 1, 3 },
+    [MAPSEC_NAVEL_ROCK - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_MT_EMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_BERRY_FOREST - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ICEFALL_CAVE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ROCKET_WAREHOUSE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_TRAINER_TOWER_2 - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_DOTTED_HOLE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_LOST_CAVE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_PATTERN_BUSH - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_ALTERING_CAVE - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_TANOBY_CHAMBERS - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_THREE_ISLE_PATH - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_TANOBY_KEY - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_BIRTH_ISLAND - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_MONEAN_CHAMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_LIPTOO_CHAMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_WEEPTH_CHAMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_DILFORD_CHAMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SCUFIB_CHAMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_RIXY_CHAMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_VIAPOIS_CHAMBER - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_EMBER_SPA - KANTO_MAPSEC_START] = { 1, 1 },
+    [MAPSEC_SPECIAL_AREA - KANTO_MAPSEC_START] = { 0, 0 },
+};
+
+#endif // GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
+// ===== END src/data/region_map/region_map_entries.h =====
+
+// ===== BEGIN src/data/region_map/region_map_layout_kanto.h =====
+static const u8 sRegionMapSections_Kanto[LAYER_COUNT][MAP_HEIGHT][MAP_WIDTH] = {
+    [LAYER_MAP] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_24, MAPSEC_ROUTE_25, MAPSEC_ROUTE_25, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_24, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_INDIGO_PLATEAU, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_4_POKECENTER, MAPSEC_ROUTE_4, MAPSEC_ROUTE_4, MAPSEC_ROUTE_4, MAPSEC_ROUTE_4, MAPSEC_ROUTE_4, MAPSEC_CERULEAN_CITY, MAPSEC_ROUTE_9, MAPSEC_ROUTE_9, MAPSEC_ROUTE_9, MAPSEC_ROUTE_10_POKECENTER, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_23, MAPSEC_NONE, MAPSEC_PEWTER_CITY, MAPSEC_ROUTE_3, MAPSEC_ROUTE_3, MAPSEC_ROUTE_3, MAPSEC_ROUTE_3, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_5, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_10, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_23, MAPSEC_NONE, MAPSEC_ROUTE_2, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_5, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_10, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_23, MAPSEC_NONE, MAPSEC_ROUTE_2, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_16, MAPSEC_ROUTE_16, MAPSEC_ROUTE_16, MAPSEC_ROUTE_16, MAPSEC_CELADON_CITY, MAPSEC_ROUTE_7, MAPSEC_ROUTE_7, MAPSEC_SAFFRON_CITY, MAPSEC_ROUTE_8, MAPSEC_ROUTE_8, MAPSEC_ROUTE_8, MAPSEC_LAVENDER_TOWN, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_23, MAPSEC_NONE, MAPSEC_ROUTE_2, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_17, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_6, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_12, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_22, MAPSEC_ROUTE_22, MAPSEC_VIRIDIAN_CITY, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_17, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_6, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_12, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_1, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_17, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_VERMILION_CITY, MAPSEC_ROUTE_11, MAPSEC_ROUTE_11, MAPSEC_ROUTE_11, MAPSEC_ROUTE_12, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_1, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_17, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_12, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_PALLET_TOWN, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_17, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_14, MAPSEC_ROUTE_13, MAPSEC_ROUTE_13, MAPSEC_ROUTE_12, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_21, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_18, MAPSEC_ROUTE_18, MAPSEC_ROUTE_18, MAPSEC_ROUTE_18, MAPSEC_ROUTE_18, MAPSEC_FUCHSIA_CITY, MAPSEC_ROUTE_15, MAPSEC_ROUTE_15, MAPSEC_ROUTE_14, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_21, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROUTE_19, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_CINNABAR_ISLAND, MAPSEC_ROUTE_20, MAPSEC_ROUTE_20, MAPSEC_ROUTE_20, MAPSEC_ROUTE_20, MAPSEC_ROUTE_20, MAPSEC_ROUTE_20, MAPSEC_ROUTE_20, MAPSEC_ROUTE_19, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+    },
+    [LAYER_DUNGEON] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_MT_MOON, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_CERULEAN_CAVE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ROCK_TUNNEL, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_KANTO_VICTORY_ROAD, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_POWER_PLANT, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_DIGLETTS_CAVE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_VIRIDIAN_FOREST, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_POKEMON_TOWER, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_DIGLETTS_CAVE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_KANTO_SAFARI_ZONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_POKEMON_MANSION, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_SEAFOAM_ISLANDS, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+    }
+};
+// ===== END src/data/region_map/region_map_layout_kanto.h =====
+// ===== BEGIN src/data/region_map/region_map_layout_sevii_123.h =====
+static const u8 sRegionMapSections_Sevii123[LAYER_COUNT][MAP_HEIGHT][MAP_WIDTH] = {
+    [LAYER_MAP] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_KINDLE_ROAD, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_KINDLE_ROAD, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_KINDLE_ROAD, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_KINDLE_ROAD, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_KINDLE_ROAD, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_CAPE_BRINK, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_ONE_ISLAND, MAPSEC_KINDLE_ROAD, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_CAPE_BRINK, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_TREASURE_BEACH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_TWO_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_TREASURE_BEACH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_BOND_BRIDGE, MAPSEC_BOND_BRIDGE, MAPSEC_BOND_BRIDGE, MAPSEC_BOND_BRIDGE, MAPSEC_THREE_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_THREE_ISLE_PORT, MAPSEC_THREE_ISLE_PORT, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE}
+    }, 
+    [LAYER_DUNGEON] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_MT_EMBER, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_BERRY_FOREST, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE}
+    }
+};
+// ===== END src/data/region_map/region_map_layout_sevii_123.h =====
+// ===== BEGIN src/data/region_map/region_map_layout_sevii_45.h =====
+static const u8 sRegionMapSections_Sevii45[LAYER_COUNT][MAP_HEIGHT][MAP_WIDTH] = {
+    [LAYER_MAP] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_FOUR_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NAVEL_ROCK, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_RESORT_GORGEOUS, MAPSEC_RESORT_GORGEOUS, MAPSEC_RESORT_GORGEOUS, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_WATER_LABYRINTH, MAPSEC_WATER_LABYRINTH, MAPSEC_WATER_LABYRINTH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_FIVE_ISLAND, MAPSEC_FIVE_ISLE_MEADOW, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_FIVE_ISLE_MEADOW, MAPSEC_MEMORIAL_PILLAR, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_MEMORIAL_PILLAR, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_MEMORIAL_PILLAR, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE}
+    }, 
+    [LAYER_DUNGEON] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ICEFALL_CAVE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_LOST_CAVE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE}
+    }
+};
+// ===== END src/data/region_map/region_map_layout_sevii_45.h =====
+// ===== BEGIN src/data/region_map/region_map_layout_sevii_67.h =====
+static const u8 sRegionMapSections_Sevii67[LAYER_COUNT][MAP_HEIGHT][MAP_WIDTH] = {
+    [LAYER_MAP] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_OUTCAST_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_OUTCAST_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_OUTCAST_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_GREEN_PATH, MAPSEC_GREEN_PATH, MAPSEC_GREEN_PATH, MAPSEC_WATER_PATH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_WATER_PATH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_SIX_ISLAND, MAPSEC_WATER_PATH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_TRAINER_TOWER, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_WATER_PATH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_TRAINER_TOWER, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_RUIN_VALLEY, MAPSEC_RUIN_VALLEY, MAPSEC_WATER_PATH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_SEVEN_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_RUIN_VALLEY, MAPSEC_RUIN_VALLEY, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_CANYON_ENTRANCE, MAPSEC_SEVAULT_CANYON, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_SEVAULT_CANYON, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_SEVAULT_CANYON, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_TANOBY_RUINS, MAPSEC_TANOBY_RUINS, MAPSEC_TANOBY_RUINS, MAPSEC_TANOBY_RUINS, MAPSEC_TANOBY_RUINS, MAPSEC_TANOBY_RUINS, MAPSEC_TANOBY_RUINS, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_BIRTH_ISLAND, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE}
+    }, 
+    [LAYER_DUNGEON] =
+    {
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_ALTERING_CAVE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_PATTERN_BUSH, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_DOTTED_HOLE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_TANOBY_CHAMBERS, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE},
+        {MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE, MAPSEC_NONE}
+    }
+};
+// ===== END src/data/region_map/region_map_layout_sevii_67.h =====
 
 static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_PALLET_TOWN         - KANTO_MAPSEC_START] = {MAP(MAP_PALLET_TOWN),                           HEAL_LOCATION_PALLET_TOWN},

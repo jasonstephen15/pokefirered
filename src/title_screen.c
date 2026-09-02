@@ -73,24 +73,24 @@ static void DeactivateSlashSprite(u8 spriteId);
 static bool32 IsSlashSpriteDeactivated(u8 spriteId);
 static void SpriteCallback_Slash(struct Sprite *sprite);
 
-static const u8 sBorderBgTiles[] = INCBIN_U8("graphics/title_screen/border_bg.4bpp.lz");
+static const u8 sBorderBgTiles[] = INCBIN_U8("assets/graphics.bin", 0x315978, 0x1C);
 
 #if defined(FIRERED)
-static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/firered/border_bg.bin.lz");
+static const u8 sBorderBgMap[] = INCBIN_U8("assets/graphics.bin", 0x315994, 0xA4);
 #elif defined(LEAFGREEN)
-static const u8 sBorderBgMap[] = INCBIN_U8("graphics/title_screen/leafgreen/border_bg.bin.lz");
+static const u8 sBorderBgMap[] = INCBIN_U8("assets/graphics.bin", 0x315A38, 0xAC);
 #endif
 
-static const u32 sSlash_Gfx[] = INCBIN_U32("graphics/title_screen/slash.4bpp.lz");
+static const u32 sSlash_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x315AE4, 0x130);
 
 #if defined(FIRERED)
-static const u16 sFlames_Pal[] = INCBIN_U16("graphics/title_screen/firered/flames.gbapal");
-static const u32 sFlames_Gfx[] = INCBIN_U32("graphics/title_screen/firered/flames.4bpp.lz");
-static const u32 sBlankFlames_Gfx[] = INCBIN_U32("graphics/title_screen/firered/blank_flames.4bpp.lz");
+static const u16 sFlames_Pal[] = INCBIN_U16("assets/graphics.bin", 0x315C14, 0x20);
+static const u32 sFlames_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x315C34, 0x278);
+static const u32 sBlankFlames_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x315EAC, 0xA0);
 #elif defined(LEAFGREEN)
-static const u16 sLeaves_Pal[] = INCBIN_U16("graphics/title_screen/leafgreen/leaves.gbapal");
-static const u32 sLeaves_Gfx[] = INCBIN_U32("graphics/title_screen/leafgreen/leaves.4bpp.lz");
-static const u32 sStreak_Gfx[] = INCBIN_U32("graphics/title_screen/leafgreen/streak.4bpp.lz");
+static const u16 sLeaves_Pal[] = INCBIN_U16("assets/graphics.bin", 0x315F4C, 0x20);
+static const u32 sLeaves_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x315F6C, 0x118);
+static const u32 sStreak_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x316084, 0x60);
 #endif
 
 static const struct OamData sOamData_FlameOrLeaf = {
@@ -323,12 +323,12 @@ static const u16 sStreakYPositions[] = {
 };
 #endif
 
-static const u32 sUnused_Tilemap1[] = INCBIN_U32("graphics/title_screen/unused1.bin.lz");
-static const u32 sUnused_Tilemap2[] = INCBIN_U32("graphics/title_screen/unused2.bin.lz");
-static const u32 sUnused_Tilemap3[] = INCBIN_U32("graphics/title_screen/unused3.bin.lz");
-static const u32 sUnused_Tilemap4[] = INCBIN_U32("graphics/title_screen/unused4.bin.lz");
-static const u32 sUnused_Tilemap5[] = INCBIN_U32("graphics/title_screen/unused5.bin.lz");
-static const u32 sUnused_Tilemap6[] = INCBIN_U32("graphics/title_screen/unused6.bin.lz");
+static const u32 sUnused_Tilemap1[] = INCBIN_U32("assets/graphics.bin", 0x3160E4, 0x824);
+static const u32 sUnused_Tilemap2[] = INCBIN_U32("assets/graphics.bin", 0x316908, 0x7F8);
+static const u32 sUnused_Tilemap3[] = INCBIN_U32("assets/graphics.bin", 0x317100, 0x79C);
+static const u32 sUnused_Tilemap4[] = INCBIN_U32("assets/graphics.bin", 0x31789C, 0x81C);
+static const u32 sUnused_Tilemap5[] = INCBIN_U32("assets/graphics.bin", 0x3180B8, 0x7C8);
+static const u32 sUnused_Tilemap6[] = INCBIN_U32("assets/graphics.bin", 0x318880, 0x824);
 
 static const u32 *const sUnused_Tilemaps[] = {
     sUnused_Tilemap1,

@@ -905,7 +905,133 @@ const u8 gStartMenuDesc_Option[] = _("Adjust various game settings such as text\
 const u8 gStartMenuDesc_Exit[] = _("Close this MENU window.");
 const u8 gStartMenuDesc_Retire[] = _("Retire from the SAFARI GAME and return to\nthe registration counter.");
 
-#include "data/text/quest_log.h"
+// ===== BEGIN src/data/text/quest_log.h =====
+const u8 gText_QuestLog_PreviouslyOnYourQuest[] = _("Previously on your quest…");
+const u8 gText_QuestLog_SwitchMon1WithMon2[] = _("{PLAYER} switched the POKéMON\n{STR_VAR_1} with {STR_VAR_2}.");
+const u8 gText_QuestLog_SwappedHeldItemsOnMon[] = _("Took the item {STR_VAR_2} from\n{STR_VAR_1} and gave it the item\n{STR_VAR_3} to hold.");
+const u8 gText_QuestLog_TookHeldItemFromMon[] = _("Took the item {STR_VAR_2} from\n{STR_VAR_1}.");
+const u8 gText_QuestLog_UsedItemOnMonAtThisLocation[] = _("Used the item {STR_VAR_1} on {STR_VAR_2}\nat this location.");
+const u8 gText_QuestLog_UsedTheItem[] = _("{PLAYER} used the\n{STR_VAR_1}.");
+const u8 gText_QuestLog_UsedTheKeyItem[] = _("Used the item {STR_VAR_1}, which was\nin the KEY ITEMS POCKET.");
+const u8 gText_QuestLog_MonLearnedMoveFromTM[] = _("{STR_VAR_1} learned the move\n{STR_VAR_2} from a TM.");
+const u8 gText_QuestLog_MonReplacedMoveWithTM[] = _("{STR_VAR_1} learned the move\n{STR_VAR_2} from a TM and forgot\nthe move {STR_VAR_3}.");
+const u8 gText_QuestLog_MonsWereFullyRestoredAtCenter[] = _("POKéMON were fully restored\nat a POKéMON CENTER.");
+const u8 gText_QuestLog_PlayerBattledChampionRival[] = _("{DYNAMIC 0x00} had a marvelous battle\nwith the CHAMPION, {DYNAMIC 0x01}.");
+const u8 gText_QuestLog_PlayerSentOutMon1RivalSentOutMon2[] = _("In the end, {DYNAMIC 0x00} sent out {DYNAMIC 0x01}\nwhile {DYNAMIC 0x02} countered with\n{DYNAMIC 0x03}.");
+const u8 gText_QuestLog_WonTheMatchAsAResult[] = _("And, as a result of battling with every\nbit of power, {DYNAMIC 0x00} won\nthe match.");
+const u8 gText_QuestLog_StoredItemInPC[] = _("Removed the item {STR_VAR_1} from\nthe BAG's ITEMS POCKET and stored it\non the PC.");
+const u8 gText_QuestLog_WithdrewItemFromPC[] = _("{PLAYER} withdrew the item {STR_VAR_1}\nfrom the PC.");
+const u8 gText_QuestLog_TradedMon1ForPersonsMon2[] = _("Traded {STR_VAR_3} in exchange for\n{STR_VAR_1}'s {STR_VAR_2}.");
+const u8 gText_QuestLog_SingleBattleWithPersonResultedInOutcome[] = _("Took on {DYNAMIC 0x00} in a SINGLE BATTLE.\nIt was a hotly contested match that\nresulted in a {DYNAMIC 0x01}.");
+const u8 gText_QuestLog_DoubleBattleWithPersonResultedInOutcome[] = _("Took on {DYNAMIC 0x00} in a DOUBLE BATTLE.\nIt was an extended match that resulted\nin a {DYNAMIC 0x01}.");
+const u8 gText_QuestLog_MultiBattleWithPeopleResultedInOutcome[] = _("{DYNAMIC 0x00} and {DYNAMIC 0x01} took on\n{DYNAMIC 0x02} and {DYNAMIC 0x03} in a\nMULTI BATTLE and got a {DYNAMIC 0x04}.");
+const u8 gText_QuestLog_Win[] = _("win");
+const u8 gText_QuestLog_Loss[] = _("loss");
+const u8 gText_QuestLog_MingledInUnionRoom[] = _("Mingled with other TRAINERS in\nthe UNION ROOM.");
+const u8 gText_QuestLog_DepartedPlaceInTownForNextDestination[] = _("Departed {STR_VAR_2}\nin {STR_VAR_1} for the next\ndestination.");
+const u8 gText_QuestLog_SwitchedMonsBetweenBoxes[] = _("After consideration, switched\n{DYNAMIC 0x01} in {DYNAMIC 0x00} with\n{DYNAMIC 0x03} in {DYNAMIC 0x02}.");
+const u8 gText_QuestLog_MovedMonToNewBox[] = _("After deep thought, switched\n{DYNAMIC 0x01} in BOX “{DYNAMIC 0x00}” to\nthe BOX “{DYNAMIC 0x02}.”");
+const u8 gText_QuestLog_SwitchedMonsWithinBox[] = _("Switched around {DYNAMIC 0x01} and\n{DYNAMIC 0x02} in {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_MovedMonWithinBox[] = _("Moved {DYNAMIC 0x01} in {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_SwitchedPartyMonForPCMon[] = _("Switched {DYNAMIC 0x01} in {DYNAMIC 0x00}\nwith {DYNAMIC 0x02} in the party.");
+const u8 gText_QuestLog_WithdrewMonFromPC[] = _("Added {DYNAMIC 0x01} in {DYNAMIC 0x00}\nto the party.");
+const u8 gText_QuestLog_DepositedMonInPC[] = _("Moved {DYNAMIC 0x00} from the party\nto {DYNAMIC 0x01}.");
+const u8 gText_QuestLog_SwitchedMultipleMons[] = _("Moved a group of POKéMON in\n{DYNAMIC 0x00} to {DYNAMIC 0x01}.");
+const u8 gText_QuestLog_ADifferentSpot[] = _("a different spot");
+const u8 gText_QuestLog_GaveMonHeldItemFromPC[] = _("Removed the item {STR_VAR_1} from\n{PLAYER}'s PC and gave it to {STR_VAR_2}\nto hold.");
+const u8 gText_QuestLog_SwappedHeldItemFromPC[] = _("Removed the item {STR_VAR_1} from\na PC, gave it to {STR_VAR_2}, and put\nthe {STR_VAR_3} it held in the BAG.");
+const u8 gText_QuestLog_ChattedWithManyTrainers[] = _("Chatted with many TRAINERS.");
+const u8 gText_QuestLog_Handily[] = _("handily");
+const u8 gText_QuestLog_Tenaciously[] = _("tenaciously");
+const u8 gText_QuestLog_Somehow[] = _("somehow");
+const u8 gText_QuestLog_TradedMon1ForTrainersMon2[] = _("Met and traded with {STR_VAR_1}.\nObtained the TRAINER's {STR_VAR_2} in\nexchange for {STR_VAR_3}.");
+const u8 gText_QuestLog_BattledTrainerEndedInOutcome[] = _("Met and battled {STR_VAR_1}.\nThe match ended in a {STR_VAR_2}.");
+const u8 gText_QuestLog_BoughtItem[] = _("Went to the POKéMON MART in\n{DYNAMIC 0x00} and bought one \n{DYNAMIC 0x01}.");
+const u8 gText_QuestLog_BoughtItemsIncludingItem[] = _("Went to the POKéMON MART in\n{DYNAMIC 0x00} and spent ¥{DYNAMIC 0x02} for\nitems including {DYNAMIC 0x01}(s).");
+const u8 gText_QuestLog_SoldNumOfItem[] = _("{DYNAMIC 0x00} went to the POKéMON MART in\n{DYNAMIC 0x01} and sold {DYNAMIC 0x03} of\nthe item {DYNAMIC 0x02}.");
+const u8 gText_QuestLog_SoldItemsIncludingItem[] = _("Sold items including {DYNAMIC 0x01} at\nthe POKéMON MART in {DYNAMIC 0x00},\nworth ¥{DYNAMIC 0x02}.");
+const u8 gText_QuestLog_JustOne[] = _("just one");
+const u8 gText_QuestLog_Num[] = _("{DYNAMIC 0x04}");
+const u8 gText_QuestLog_UsedSoftboiled[] = _("{STR_VAR_1} shared its HP using the move\nSOFTBOILED.");
+const u8 gText_QuestLog_UsedMilkDrink[] = _("{STR_VAR_1} shared its HP using the move\nMILK DRINK.");
+const u8 gText_QuestLog_MonLearnedMoveFromHM[] = _("{STR_VAR_1} securely learned the move\n{STR_VAR_2} using an HM.");
+const u8 gText_QuestLog_MonReplacedMoveWithHM[] = _("{STR_VAR_1} securely learned the move\n{STR_VAR_2} using an HM and forgot\nthe move {STR_VAR_3}.");
+const u8 gText_QuestLog_DefeatedWildMon[] = _("{DYNAMIC 0x05} managed to defeat the POKéMON\n{DYNAMIC 0x01} in {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_DefeatedWildMons[] = _("Defeated {DYNAMIC 0x02} wild POKéMON including\n{DYNAMIC 0x01} in {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_CaughtWildMon[] = _("{DYNAMIC 0x05} managed to catch the POKéMON\n{DYNAMIC 0x03} in {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_CaughtWildMons[] = _("Threw POKé BALLS in a frenzy, catching\n{DYNAMIC 0x04} POKéMON including {DYNAMIC 0x03} here\nin {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_DefeatedWildMonAndCaughtWildMon[] = _("{DYNAMIC 0x05} defeated the POKéMON\n{DYNAMIC 0x01} and caught one {DYNAMIC 0x03}\nin {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_DefeatedWildMonAndCaughtWildMons[] = _("Defeated the POKéMON {DYNAMIC 0x01}\nand caught {DYNAMIC 0x04} POKéMON including\n{DYNAMIC 0x03} in {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_DefeatedWildMonsAndCaughtWildMon[] = _("{DYNAMIC 0x05} defeated {DYNAMIC 0x02} POKéMON including\n{DYNAMIC 0x01} and caught one {DYNAMIC 0x03}\nin {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_DefeatedWildMonsAndCaughtWildMons[] = _("Defeated {DYNAMIC 0x02} POKéMON including\n{DYNAMIC 0x01} and caught {DYNAMIC 0x04} POKéMON\nincluding {DYNAMIC 0x03} in {DYNAMIC 0x00}.");
+const u8 gText_QuestLog_GaveMonHeldItem[] = _("Made {STR_VAR_1} hold the item\n{STR_VAR_2}.");
+const u8 gText_QuestLog_GaveMonHeldItem2[] = _("{PLAYER} made {STR_VAR_1} hold the item\n{STR_VAR_2}.");
+const u8 gText_QuestLog_UsedCut[] = _("{STR_VAR_1} used the Hidden Move\nCUT here.");
+const u8 gText_QuestLog_UsedFly[] = _("{STR_VAR_1} used the Hidden Move\nFLY and flew to {STR_VAR_2}.");
+const u8 gText_QuestLog_UsedSurf[] = _("{STR_VAR_1} used the Hidden Move\nSURF and rode the waves.");
+const u8 gText_QuestLog_UsedStrength[] = _("{STR_VAR_1} used the Hidden Move\nSTRENGTH here.");
+const u8 gText_QuestLog_UsedFlash[] = _("{STR_VAR_1} used the Hidden Move\nFLASH and illuminated a pitch-black\ncave.");
+const u8 gText_QuestLog_UsedRockSmash[] = _("{STR_VAR_1} used the Hidden Move\nROCK SMASH here.");
+const u8 gText_QuestLog_UsedWaterfall[] = _("{STR_VAR_1} used the Hidden Move\nWATERFALL to scale a raging torrent."); // Unused
+const u8 gText_QuestLog_UsedDive[] = _("{STR_VAR_1}は　ふかい　ところを　めざし\nひでんわざ\nダイビングを　つかった！");
+const u8 gText_QuestLog_UsedDigInLocation[] = _("{STR_VAR_1} used DIG to escape from\n{STR_VAR_2}.");
+const u8 gText_QuestLog_UsedSweetScent[] = _("{STR_VAR_1} used SWEET SCENT to attract\nwild POKéMON.");
+const u8 gText_QuestLog_UsedTeleportToLocation[] = _("{STR_VAR_1} used TELEPORT, transporting\nthe party to {STR_VAR_2}'s\n{STR_VAR_3}.");
+const u8 gText_QuestLog_LeftTownsLocationForNextDestination[] = _("{PLAYER} left {STR_VAR_1}'s\n{STR_VAR_2} for the next\ndestination.");
+const u8 gText_QuestLog_PlayedGamesAtGameCorner[] = _("Played a lot of games at the ROCKET\nGAME CORNER in {STR_VAR_1}.");
+const u8 gText_QuestLog_RestedAtHome[] = _("{PLAYER} rested comfortably at home.");
+const u8 gText_QuestLog_LeftOaksLab[] = _("{PLAYER} left PROF. OAK's POKéMON\nRESEARCH LAB.");
+const u8 gText_QuestLog_GymWasFullOfToughTrainers[] = _("The GYM in {STR_VAR_1} was full of\ntough TRAINERS…\nPreparations had to be made.");
+const u8 gText_QuestLog_DepartedGym[] = _("Departed the GYM in {STR_VAR_1}.");
+const u8 gText_QuestLog_HadGreatTimeInSafariZone[] = _("{PLAYER} had a great time with POKéMON\nin the SAFARI ZONE.");
+const u8 gText_QuestLog_ManagedToGetOutOfLocation[] = _("Managed to get out of {STR_VAR_2}\nafter wandering about.");
+const u8 gText_QuestLog_TookOnGymLeadersMonWithMonAndWon[] = _("Took on {DYNAMIC 0x00} GYM LEADER\n{DYNAMIC 0x01}'s {DYNAMIC 0x02} with {DYNAMIC 0x03}\nand won {DYNAMIC 0x04}!");
+const u8 gText_QuestLog_TookOnEliteFoursMonWithMonAndWon[] = _("Took on ELITE FOUR {DYNAMIC 0x00}'s\n{DYNAMIC 0x01} with {DYNAMIC 0x02} and\nwon {DYNAMIC 0x03}!");
+const u8 gText_QuestLog_TookOnTrainersMonWithMonAndWon[] = _("In {DYNAMIC 0x00}, took on\n{DYNAMIC 0x01}'s {DYNAMIC 0x02} with {DYNAMIC 0x03}\nand won {DYNAMIC 0x04}!");
+const u8 gText_QuestLog_Coolly[] = _("coolly");
+const u8 gText_QuestLog_Barely[] = _("barely");
+const u8 gText_QuestLog_UsedEscapeRope[] = _("{PLAYER} used an ESCAPE ROPE to get\nout from {STR_VAR_2}.");
+const u8 gText_QuestLog_Draw[] = _("draw");
+const u8 gText_QuestLog_DepartedTheLocationForNextDestination[] = _("Departed from the {STR_VAR_2}\nfor the next destination.");
+const u8 gText_QuestLog_DepartedFromLocationToNextDestination[] = _("{PLAYER} departed from\n{STR_VAR_2} and made way\nto the next destination.");
+const u8 gText_QuestLog_ObtainedItemInLocation[] = _("Here in {STR_VAR_1}, {PLAYER}\nobtained the item {STR_VAR_2}.");
+const u8 gText_QuestLog_ArrivedInLocation[] = _("Arrived in {STR_VAR_1}.");
+const u8 gText_QuestLog_SavedGameAtLocation[] = _("And {PLAYER} saved the game at this\nlocation: {STR_VAR_1}.");
+const u8 gText_QuestLog_Home[] = _("HOME");
+const u8 gText_QuestLog_OakResearchLab[] = _("OAK RESEARCH LAB");
+const u8 gText_QuestLog_Gym[] = _("GYM");
+const u8 gText_QuestLog_PokemonLeagueGate[] = _("POKéMON LEAGUE GATE");
+const u8 gText_QuestLog_ViridianForest[] = _("VIRIDIAN FOREST");
+const u8 gText_QuestLog_PewterMuseumOfScience[] = _("PEWTER MUSEUM OF SCIENCE");
+const u8 gText_QuestLog_MtMoon[] = _("MT. MOON");
+const u8 gText_QuestLog_BikeShop[] = _("BIKE SHOP");
+const u8 gText_QuestLog_BillsHouse[] = _("BILL'S HOUSE");
+const u8 gText_QuestLog_DayCare[] = _("DAY CARE");
+const u8 gText_QuestLog_UndergroundPath[] = _("UNDERGROUND PATH");
+const u8 gText_QuestLog_PokemonFanClub[] = _("POKéMON FAN CLUB");
+const u8 gText_QuestLog_SSAnne[] = _("S.S. ANNE");
+const u8 gText_QuestLog_DiglettsCave[] = _("DIGLETT'S CAVE");
+const u8 gText_QuestLog_RockTunnel[] = _("ROCK TUNNEL");
+const u8 gText_QuestLog_PowerPlant[] = _("POWER PLANT");
+const u8 gText_QuestLog_PokemonTower[] = _("POKéMON TOWER");
+const u8 gText_QuestLog_VolunteerHouse[] = _("VOLUNTEER HOUSE");
+const u8 gText_QuestLog_NameRatersHouse[] = _("NAME RATER'S HOUSE");
+const u8 gText_QuestLog_CeladonDeptStore[] = _("CELADON DEPT. STORE");
+const u8 gText_QuestLog_CeladonMansion[] = _("CELADON MANSION");
+const u8 gText_QuestLog_RocketGameCorner[] = _("ROCKET GAME CORNER");
+const u8 gText_QuestLog_Restaurant[] = _("RESTAURANT");
+const u8 gText_QuestLog_RocketHideout[] = _("ROCKET HIDEOUT");
+const u8 gText_QuestLog_SafariZone[] = _("SAFARI ZONE");
+const u8 gText_QuestLog_WardensHome[] = _("WARDEN'S HOME");
+const u8 gText_QuestLog_FightingDojo[] = _("FIGHTING DOJO");
+const u8 gText_QuestLog_SilphCo[] = _("SILPH CO.");
+const u8 gText_QuestLog_SeafoamIslands[] = _("SEAFOAM ISLANDS");
+const u8 gText_QuestLog_PokemonMansion[] = _("POKéMON MANSION");
+const u8 gText_QuestLog_PokemonResearchLab[] = _("POKéMON RESEARCH LAB");
+const u8 gText_QuestLog_VictoryRoad[] = _("VICTORY ROAD");
+const u8 gText_QuestLog_PokemonLeague[] = _("POKéMON LEAGUE");
+const u8 gText_QuestLog_CeruleanCave[] = _("CERULEAN CAVE");
+// ===== END src/data/text/quest_log.h =====
 
 const u8 gText_WasUsedOn[] = _(" was used on\n");
 const u8 gText_Period[] = _(".");
@@ -983,7 +1109,206 @@ const u8 gString_SlotMachineControls[] = _("{DPAD_LEFTRIGHT}COMBOS {DPAD_DOWN}WA
 const u8 gText_TeachyTV[] = _("おしえテレビ");
 const u8 gText_End[] = _("おしまい");
 
-#include "data/text/teachy_tv.h"
+// ===== BEGIN src/data/text/teachy_tv.h =====
+const u8 gTeachyTvString_TeachBattle[] = _("Teach me how to battle.");
+const u8 gTeachyTvString_StatusProblems[] = _("What are status problems?");
+const u8 gTeachyTvString_TypeMatchups[] = _("What are type matchups?");
+const u8 gTeachyTvString_CatchPkmn[] = _("I want to catch POKéMON.");
+const u8 gTeachyTvString_AboutTMs[] = _("Teach me about TMs.");
+const u8 gTeachyTvString_RegisterItem[] = _("How do I register an item?");
+const u8 gTeachyTvString_Cancel[] = _("CANCEL");
+const u8 gTeachyTvText_PokedudeSaysHello[] = _(
+    "Hey, all you TRAINERS out there!\n"
+    "HELLO, TRAINERS!\p"
+    "……… ……… ………\p"
+    "Come on, let me hear you!\n"
+    "HELLO, TRAINERS!\l"
+    "It's me, the POKé DUDE!\p");
+const u8 gTeachyTvText_BattleScript1[] = _(
+    "Today, the POKé DUDE's here to\n"
+    "tell you about how you can battle\l"
+    "POKéMON!\p"
+    "Say you're out for a stroll when,\n"
+    "suddenly, a wild POKéMON appears!\p"
+    "It's up to you to smartly use your\n"
+    "POKéMON and their moves to reduce\l"
+    "the opponent's HP to nothing, and\l"
+    "claim victory!\p"
+    "I'll show you how to do that in\n"
+    "person and for sure!\p"
+    "All righty, here goes!\p"
+    "Keep your eyes glued to the super\n"
+    "POKé DUDE SHOW!");
+const u8 gTeachyTvText_BattleScript2[] = _(
+    "Well, did you get that?\p"
+    "Even if your own POKéMON's HP\n"
+    "falls to zero, and it becomes\l"
+    "unable to battle, not to worry!\p"
+    "Just take it to any POKéMON\n"
+    "CENTER and heal it!\p"
+    "All righty, be seeing you!\p"
+    "Remember, TRAINERS, a good deed\n"
+    "a day brings happiness to stay!");
+const u8 gTeachyTvText_StatusScript1[] = _(
+    "Today, the POKé DUDE's here to\n"
+    "tell you about status problems!\p"
+    "Status problems include poisoning,\n"
+    "paralysis, sleep, burn…\p"
+    "There are a couple others, but\n"
+    "they really are trouble.\p"
+    "Get any one, and your POKéMON\n"
+    "may become useless in battle.\p"
+    "You know, it hurts the POKé DUDE\n"
+    "to see a POKéMON suffer…\p"
+    "So, what should you do if your\n"
+    "POKéMON gets a status problem?\p"
+    "Well, you've got me to show you!\p"
+    "All righty, here goes!\p"
+    "Keep your eyes glued to the super\n"
+    "POKé DUDE SHOW!");
+const u8 gTeachyTvText_StatusScript2[] = _(
+    "Poisoning or paralysis don't go\n"
+    "away after a battle.\p"
+    "If a POKéMON is poisoned, it loses\n"
+    "HP even while you're walking.\p"
+    "You should heal POKéMON of these\n"
+    "kinds of problems right away.\p"
+    "Use an item, or try to get to a\n"
+    "POKéMON CENTER for healing.\p"
+    "That wasn't hard, was it?\n"
+    "All righty, be seeing you!\p"
+    "Remember, TRAINERS, a good deed\n"
+    "a day brings happiness to stay!");
+const u8 gTeachyTvText_MatchupsScript1[] = _(
+    "Does everyone know about type\n"
+    "matchups?\p"
+    "POKéMON and their moves all\n"
+    "belong to certain types.\p"
+    "For example, there are such types\n"
+    "as GRASS and WATER.\p"
+    "You need to consider the type of\n"
+    "the move used to attack…\p"
+    "And, the type of the POKéMON that\n"
+    "is hit by that attack.\p"
+    "Depending on how those two types\n"
+    "match up, the damage can change.\p"
+    "You see, it depends on whether\n"
+    "the type matchup is good or bad.\p"
+    "If you don't know how matchups\n"
+    "work, battles will be tough.\p"
+    "So, let me demonstrate exactly\n"
+    "what I mean.\p"
+    "All righty, here goes!\p"
+    "Keep your eyes glued to the super\n"
+    "POKé DUDE SHOW!");
+const u8 gTeachyTvText_MatchupsScript2[] = _(
+    "Is it possible to launch an attack\n"
+    "that will inflict heavy damage?\p"
+    "Does the opposing POKéMON pose\n"
+    "a threat to your POKéMON?\p"
+    "Is there any chance that it may\n"
+    "have disastrously tough moves?\p"
+    "Watch the type matchups to gain\n"
+    "the upper hand!\p"
+    "All righty, be seeing you!\p"
+    "Oh, for the COOL-type POKé DUDE,\n"
+    "AWESOME-type kids like you match\l"
+    "up perfectly!\p"
+    "Remember, a good deed a day\n"
+    "brings happiness to stay!");
+const u8 gTeachyTvText_CatchingScript1[] = _(
+    "Today, the POKé DUDE's going to\n"
+    "show you how to catch POKéMON!\p"
+    "Just imagine… A groovy POKéMON\n"
+    "suddenly appearing in the wild!\p"
+    "Oh, you want it!\n"
+    "You just can't help it!\p"
+    "Oh, you have to catch it!\n"
+    "You gotta have it!\p"
+    "Let me show you how you can make\n"
+    "it happen!\p"
+    "All righty, here goes!\p"
+    "Keep your eyes glued to the super\n"
+    "POKé DUDE SHOW!");
+const u8 gTeachyTvText_CatchingScript2[] = _(
+    "If your first POKé BALL fails to\n"
+    "catch the POKéMON, don't give up!\p"
+    "Keep throwing POKé BALLS…\n"
+    "It's bound to work sometime!\p"
+    "All righty, be seeing you!\p"
+    "Remember, TRAINERS, a good deed\n"
+    "a day brings happiness to stay!");
+const u8 gTeachyTvText_TMsScript1[] = _(
+    "Hey, everyone!\n"
+    "Do you all have TMs?\p"
+    "A TM, Technical Machine, is an\n"
+    "amazingly great item!\p"
+    "It teaches POKéMON a move that\n"
+    "it may not learn when leveling up!\p"
+    "Isn't that just great? What a\n"
+    "convenient world we live in!\p"
+    "Open the TM CASE and check out\n"
+    "the TMs you have.\p"
+    "You can check them out in detail,\n"
+    "too.");
+const u8 gPokedudeText_TMTypes[] = _(
+    "POKé DUDE: NORMAL, WATER, GRASS…\n"
+    "TMs also come in types.\p"
+    "Check the type and teach it to\n"
+    "a POKéMON that matches up well.\p"
+    "For example, WATER PULSE is\n"
+    "suitable for WATER-type POKéMON.\p"
+    "BULLET SEED is a move that most\n"
+    "GRASS-type POKéMON can learn.\p"
+    "There's one other thing!");
+const u8 gPokedudeText_ReadTMDescription[] = _(
+    "Don't just look at the type, read\n"
+    "the description, too.\p"
+    "It will contain hints about what\n"
+    "POKéMON might learn the move.\p"
+    "For example, take a move like\n"
+    "FOCUS PUNCH.\p"
+    "It doesn't sound like anything a\n"
+    "bird or fish POKéMON can learn.\p"
+    "So, try using it on POKéMON with\n"
+    "arms that can throw punches!");
+const u8 gTeachyTvText_TMsScript2[] = _(
+    "Wow, I talked a lot today!\n"
+    "All righty, be seeing you!\p"
+    "Remember, TRAINERS, a good deed\n"
+    "a day brings happiness to stay!");
+const u8 gTeachyTvText_RegisterScript1[] = _(
+    "A TRAINER's BAG has a bunch of\n"
+    "nifty, convenient features!\p"
+    "Take stuff in the KEY ITEMS\n"
+    "POCKET, for instance.\p"
+    "You can use a key item without\n"
+    "opening the BAG every time.\p"
+    "For example, let's pretend I have\n"
+    "a TEACHY TV in my BAG.\p"
+    "I can register it for instant use,\n"
+    "and I'll show you how!\p"
+    "All righty, here goes!\p"
+    "Keep your eyes glued to the sorta\n"
+    "super POKé DUDE SHOW!");
+const u8 gTeachyTvText_RegisterScript2[] = _(
+    "And now, your TEACHY TV is\n"
+    "registered.\p"
+    "How do you use it?\n"
+    "Well, here's how it works.\p"
+    "Once an item in the KEY ITEMS\n"
+    "POKCET is registered, you can use\l"
+    "it by pressing SELECT.\p"
+    "So, you've given yourself\n"
+    "one-touch access to TEACHY TV.\p"
+    "All it takes for you to see me is\n"
+    "pressing one button!\p"
+    "That kind of attention is a little\n"
+    "embarrassing!\p"
+    "All righty, be seeing you!\p"
+    "Remember, TRAINERS, a good deed\n"
+    "a day brings happiness to stay!");
+// ===== END src/data/text/teachy_tv.h =====
 
 const u8 gString_Bill[] = _("BILL");
 const u8 gString_Someone[] = _("SOMEONE");

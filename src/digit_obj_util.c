@@ -64,9 +64,9 @@ static const u8 sTilesPerImage[4][4] =
     }
 };
 
-const u16 gMinigameDigits_Pal[] = INCBIN_U16("graphics/misc/minigame_digits.gbapal");
-const u32 gMinigameDigits_Gfx[] = INCBIN_U32("graphics/misc/minigame_digits.4bpp.lz");
-static const u32 sUnusedMinigameDigits_Gfx[] = INCBIN_U32("graphics/misc/minigame_digits_unused.4bpp.lz");
+const u16 gMinigameDigits_Pal[] = INCBIN_U16("assets/graphics.bin", 0x150F0, 0x20);
+const u32 gMinigameDigits_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x15110, 0xC0);
+static const u32 sUnusedMinigameDigits_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x151D0, 0xF0);
 
 // code
 bool32 DigitObjUtil_Init(u32 count)

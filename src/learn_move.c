@@ -170,8 +170,8 @@ static void MoveRelearnerMenu_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct
 static s8 YesNoMenuProcessInput(void);
 static void PrintTextOnWindow(u8 windowId, const u8 *str, u8 x, u8 y, s32 speed, s32 colorIdx);
 
-static const u16 sLearnMoveInterfaceSpritesPalette[] = INCBIN_U16("graphics/learn_move/interface_sprites.gbapal");
-static const u16 sLearnMoveInterfaceSpritesTiles[] = INCBIN_U16("graphics/learn_move/interface_sprites.4bpp");
+static const u16 sLearnMoveInterfaceSpritesPalette[] = INCBIN_U16("assets/graphics.bin", 0x22AA00, 0x20);
+static const u16 sLearnMoveInterfaceSpritesTiles[] = INCBIN_U16("assets/graphics.bin", 0x22AA20, 0x180);
 
 static const u8 sMoveTutorMenuWindowFrameDimensions[][4] =
 {

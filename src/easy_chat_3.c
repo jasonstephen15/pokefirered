@@ -151,21 +151,21 @@ static void UpdateStartSelectButtonSpriteVisibility(void);
 static void HideStartSelectButtonSprites(void);
 static void CreateFooterWindow(void);
 
-static const u16 sTriangleCursor_Pal[] = INCBIN_U16("graphics/easy_chat/triangle_cursor.gbapal");
-static const u16 sRectangleCursor_Pal[] = INCBIN_U16("graphics/easy_chat/rectangle_cursor.gbapal");
-static const u16 sTriangleCursor_Gfx[] = INCBIN_U16("graphics/easy_chat/triangle_cursor.4bpp");
-static const u16 sScrollIndicator_Gfx[] = INCBIN_U16("graphics/easy_chat/scroll_indicator.4bpp");
-static const u16 sStartSelectButtons_Gfx[] = INCBIN_U16("graphics/easy_chat/start_select_buttons.4bpp");
+static const u16 sTriangleCursor_Pal[] = INCBIN_U16("assets/graphics.bin", 0x19884, 0x20);
+static const u16 sRectangleCursor_Pal[] = INCBIN_U16("assets/graphics.bin", 0x198A4, 0x20);
+static const u16 sTriangleCursor_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x198C4, 0x20);
+static const u16 sScrollIndicator_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x198E4, 0x100);
+static const u16 sStartSelectButtons_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x199E4, 0x100);
 // In Ruby/Sapphire Easy Chat screens had a black background, and when the player & interviewer were present
 // on screen the interview_frame gfx was shown behind them.
 // In FRLG all Easy Chat screens have a filled background, so these gfx go unused
-static const u16 sRSInterviewFrame_Pal[] = INCBIN_U16("graphics/easy_chat/interview_frame.gbapal");
-static const u32 sRSInterviewFrame_Gfx[] = INCBIN_U32("graphics/easy_chat/interview_frame.4bpp.lz");
-static const u16 sTextInputFrameOrange_Pal[] = INCBIN_U16("graphics/easy_chat/text_input_frame_orange.gbapal");
-static const u16 sTextInputFrameGreen_Pal[] = INCBIN_U16("graphics/easy_chat/text_input_frame_green.gbapal");
-static const u32 sTextInputFrame_Gfx[] = INCBIN_U32("graphics/easy_chat/text_input_frame.4bpp.lz");
-static const u16 sTitleText_Pal[] = INCBIN_U16("graphics/easy_chat/title_text.gbapal");
-static const u16 sText_Pal[] = INCBIN_U16("graphics/easy_chat/text.gbapal");
+static const u16 sRSInterviewFrame_Pal[] = INCBIN_U16("assets/graphics.bin", 0x19AE4, 0x20);
+static const u32 sRSInterviewFrame_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x19B04, 0x134);
+static const u16 sTextInputFrameOrange_Pal[] = INCBIN_U16("assets/graphics.bin", 0x19C38, 0x20);
+static const u16 sTextInputFrameGreen_Pal[] = INCBIN_U16("assets/graphics.bin", 0x19C58, 0x20);
+static const u32 sTextInputFrame_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x19C78, 0xC8);
+static const u16 sTitleText_Pal[] = INCBIN_U16("assets/graphics.bin", 0x19D40, 0x8);
+static const u16 sText_Pal[] = INCBIN_U16("assets/graphics.bin", 0x19D48, 0xA);
 
 static const struct EasyChatPhraseFrameDimensions sPhraseFrameDimensions[] = {
     {

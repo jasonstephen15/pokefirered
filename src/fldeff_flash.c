@@ -154,12 +154,12 @@ static const struct FlashStruct sTransitionTypes[] = {
     }, {0}
 };
 
-static const u16 sCaveTransitionPalette_White[] = INCBIN_U16("graphics/cave_transition/white.gbapal");
-static const u16 sCaveTransitionPalette_Black[] = INCBIN_U16("graphics/cave_transition/black.gbapal");
+static const u16 sCaveTransitionPalette_White[] = INCBIN_U16("assets/graphics.bin", 0x6B804, 0x20);
+static const u16 sCaveTransitionPalette_Black[] = INCBIN_U16("assets/graphics.bin", 0x6B824, 0x20);
 
-static const u16 sCaveTransitionPalette[] = INCBIN_U16("graphics/cave_transition/tiles.gbapal");
-static const u32 sCaveTransitionTilemap[] = INCBIN_U32("graphics/cave_transition/tilemap.bin.lz");
-static const u32 sCaveTransitionTiles[] = INCBIN_U32("graphics/cave_transition/tiles.4bpp.lz");
+static const u16 sCaveTransitionPalette[] = INCBIN_U16("assets/graphics.bin", 0x6B844, 0x20);
+static const u32 sCaveTransitionTilemap[] = INCBIN_U32("assets/graphics.bin", 0x6B864, 0x1E0);
+static const u32 sCaveTransitionTiles[] = INCBIN_U32("assets/graphics.bin", 0x6BA44, 0xB4);
 
 bool8 SetUpFieldMove_Flash(void)
 {

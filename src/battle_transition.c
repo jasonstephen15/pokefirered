@@ -207,13 +207,13 @@ static void IncrementTrainerPicState(s16 spriteId);
 static s16 IsTrainerPicSlideDone(s16 spriteId);
 static void Mugshots_CreateTrainerPics(struct Task *task);
 
-static const u32 sBigPokeball_Gfx[] = INCBIN_U32("graphics/battle_transitions/big_pokeball.4bpp");
-static const u32 sSlidingPokeball_Tilemap[] = INCBIN_U32("graphics/battle_transitions/sliding_pokeball.bin");
-static const u8 sSlidingPokeball_Gfx[] = INCBIN_U8("graphics/battle_transitions/sliding_pokeball.4bpp");
-static const u32 sMugshotBanner_Gfx[] = INCBIN_U32("graphics/battle_transitions/mugshot_banner.4bpp");
-static const u8 sUnusedBrendan_Gfx[] = INCBIN_U8("graphics/battle_transitions/unused_brendan.4bpp");
-static const u8 sUnusedLass_Gfx[] = INCBIN_U8("graphics/battle_transitions/unused_lass.4bpp");
-static const u32 sGridSquare_Gfx[] = INCBIN_U32("graphics/battle_transitions/grid_square.4bpp");
+static const u32 sBigPokeball_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x883C, 0x580);
+static const u32 sSlidingPokeball_Tilemap[] = INCBIN_U32("assets/graphics.bin", 0x8DBC, 0x40);
+static const u8 sSlidingPokeball_Gfx[] = INCBIN_U8("assets/graphics.bin", 0x8DFC, 0x200);
+static const u32 sMugshotBanner_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x8FFC, 0x1E0);
+static const u8 sUnusedBrendan_Gfx[] = INCBIN_U8("assets/graphics.bin", 0x91DC, 0x800);
+static const u8 sUnusedLass_Gfx[] = INCBIN_U8("assets/graphics.bin", 0x99DC, 0x800);
+static const u32 sGridSquare_Gfx[] = INCBIN_U32("assets/graphics.bin", 0xA1DC, 0x1E0);
 
 // All battle transitions use the same intro
 static const TaskFunc sTasks_Intro[] =
@@ -567,7 +567,7 @@ static const struct SpriteTemplate sSpriteTemplate_UnusedBrendanLass[] =
 };
 
 // this palette is shared by big pokeball and sliding pokeball
-static const u16 sFieldEffectPal_Pokeball[] = INCBIN_U16("graphics/battle_transitions/sliding_pokeball.gbapal");
+static const u16 sFieldEffectPal_Pokeball[] = INCBIN_U16("assets/graphics.bin", 0xA3BC, 0x20);
 
 const struct SpritePalette gSpritePalette_Pokeball =
 {
@@ -575,13 +575,13 @@ const struct SpritePalette gSpritePalette_Pokeball =
     .tag = FLDEFF_PAL_TAG_POKEBALL_TRAIL,
 };
 
-static const u16 sMugshotPal_Lorelei[] = INCBIN_U16("graphics/battle_transitions/lorelei_bg.gbapal");
-static const u16 sMugshotPal_Bruno[] = INCBIN_U16("graphics/battle_transitions/bruno_bg.gbapal");
-static const u16 sMugshotPal_Agatha[] = INCBIN_U16("graphics/battle_transitions/agatha_bg.gbapal");
-static const u16 sMugshotPal_Lance[] = INCBIN_U16("graphics/battle_transitions/lance_bg.gbapal");
-static const u16 sMugshotPal_Blue[] = INCBIN_U16("graphics/battle_transitions/blue_bg.gbapal");
-static const u16 sMugshotPal_Red[] = INCBIN_U16("graphics/battle_transitions/red_bg.gbapal");
-static const u16 sMugshotPal_Green[] = INCBIN_U16("graphics/battle_transitions/green_bg.gbapal");
+static const u16 sMugshotPal_Lorelei[] = INCBIN_U16("assets/graphics.bin", 0xA3DC, 0x20);
+static const u16 sMugshotPal_Bruno[] = INCBIN_U16("assets/graphics.bin", 0xA3FC, 0x20);
+static const u16 sMugshotPal_Agatha[] = INCBIN_U16("assets/graphics.bin", 0xA41C, 0x20);
+static const u16 sMugshotPal_Lance[] = INCBIN_U16("assets/graphics.bin", 0xA43C, 0x20);
+static const u16 sMugshotPal_Blue[] = INCBIN_U16("assets/graphics.bin", 0xA45C, 0x20);
+static const u16 sMugshotPal_Red[] = INCBIN_U16("assets/graphics.bin", 0xA47C, 0x20);
+static const u16 sMugshotPal_Green[] = INCBIN_U16("assets/graphics.bin", 0xA49C, 0x20);
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
 {
@@ -598,7 +598,7 @@ static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =
     [FEMALE] = sMugshotPal_Green,
 };
 
-static const u16 sUnusedTrainerPalette[] = INCBIN_U16("graphics/battle_transitions/unused_trainer.gbapal");
+static const u16 sUnusedTrainerPalette[] = INCBIN_U16("assets/graphics.bin", 0xA4BC, 0x20);
 
 static const struct SpritePalette sSpritePalette_UnusedTrainer =
 {
@@ -606,8 +606,8 @@ static const struct SpritePalette sSpritePalette_UnusedTrainer =
     .tag = PALTAG_UNUSED_MUGSHOT,
 };
 
-static const u16 sBigPokeball_Tilemap[] = INCBIN_U16("graphics/battle_transitions/big_pokeball_tilemap.bin");
-static const u16 sMugshotsTilemap[] = INCBIN_U16("graphics/battle_transitions/vsbar_tilemap.bin");
+static const u16 sBigPokeball_Tilemap[] = INCBIN_U16("assets/graphics.bin", 0xA4DC, 0x4B0);
+static const u16 sMugshotsTilemap[] = INCBIN_U16("assets/graphics.bin", 0xA98C, 0x500);
 
 void BattleTransition_StartOnField(u8 transitionId)
 {

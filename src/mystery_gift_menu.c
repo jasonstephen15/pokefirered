@@ -30,8 +30,8 @@ static void CreateMysteryGiftTask(void);
 void Task_MysteryGift(u8 taskId);
 extern void CreateEReaderTask(void);
 
-static const u16 sTextboxBorder_Pal[] = INCBIN_U16("graphics/interface/mystery_gift_textbox_border.gbapal");
-static const u32 sTextboxBorder_Gfx[] = INCBIN_U32("graphics/interface/mystery_gift_textbox_border.4bpp.lz");
+static const u16 sTextboxBorder_Pal[] = INCBIN_U16("assets/graphics.bin", 0x24D6B4, 0x20);
+static const u32 sTextboxBorder_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x24D6D4, 0x30);
 
 struct MysteryGiftTaskData
 {

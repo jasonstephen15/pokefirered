@@ -62,13 +62,13 @@ static void Task_AnimateBg(u8 taskId);
 static void RestoreBgAfterAnim(void);
 
 // const data
-static const u16 sUnusedPal[] = INCBIN_U16("graphics/evolution_scene/unused.gbapal");
-static const u32 sMovingBackgroundTiles[] = INCBIN_U32("graphics/evolution_scene/bg.4bpp.lz");
-static const u32 sMovingBackgroundMap1[] = INCBIN_U32("graphics/evolution_scene/bg.bin.lz");
-static const u32 sMovingBackgroundMap2[] = INCBIN_U32("graphics/evolution_scene/bg2.bin.lz");
-static const u16 sBlackPalette[] = INCBIN_U16("graphics/evolution_scene/gray_transition_intro.gbapal");
-static const u16 sUnusedTilemap[] = INCBIN_U16("graphics/evolution_scene/unused_tilemap.bin");
-static const u16 sBgAnim_Pal[] = INCBIN_U16("graphics/evolution_scene/transition.gbapal");
+static const u16 sUnusedPal[] = INCBIN_U16("assets/graphics.bin", 0x5DCD4, 0x20);
+static const u32 sMovingBackgroundTiles[] = INCBIN_U32("assets/graphics.bin", 0x5DCF4, 0x6F8);
+static const u32 sMovingBackgroundMap1[] = INCBIN_U32("assets/graphics.bin", 0x5E3EC, 0x4E4);
+static const u32 sMovingBackgroundMap2[] = INCBIN_U32("assets/graphics.bin", 0x5E8D0, 0x4D4);
+static const u16 sBlackPalette[] = INCBIN_U16("assets/graphics.bin", 0x5EDA4, 0x20);
+static const u16 sUnusedTilemap[] = INCBIN_U16("assets/graphics.bin", 0x5EDC4, 0x680);
+static const u16 sBgAnim_Pal[] = INCBIN_U16("assets/graphics.bin", 0x5F444, 0x40);
 
 static const u8 sText_ShedinjaJapaneseName[] = _("ヌケニン");
 

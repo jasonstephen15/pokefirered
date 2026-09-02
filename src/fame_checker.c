@@ -116,22 +116,22 @@ static void Task_FCOpenOrCloseInfoBox(u8 taskId);
 static void UpdateInfoBoxTilemap(u8 bg, s16 state);
 static void PlaceListMenuCursor(bool8 isActive);
 
-static const u16 sFameCheckerTilemap[] = INCBIN_U16("graphics/fame_checker/tilemap1.bin");
-static const u8 sQuestionMarkSpriteGfx[] = INCBIN_U8("graphics/fame_checker/question_mark.4bpp");
-static const u8 sSpinningPokeballSpriteGfx[] = INCBIN_U8("graphics/fame_checker/spinning_pokeball.4bpp");
-static const u16 sSpinningPokeballSpritePalette[] = INCBIN_U16("graphics/fame_checker/spinning_pokeball.gbapal");
-static const u8 sSelectorCursorSpriteGfx[] = INCBIN_U8("graphics/fame_checker/cursor.4bpp");
-static const u16 sSelectorCursorSpritePalette[] = INCBIN_U16("graphics/fame_checker/cursor.gbapal");
-static const u8 sFujiSpriteGfx[] = INCBIN_U8("graphics/fame_checker/mr_fuji.4bpp");
-static const u16 sFujiSpritePalette[] = INCBIN_U16("graphics/fame_checker/mr_fuji.gbapal");
-static const u8 sBillSpriteGfx[] = INCBIN_U8("graphics/fame_checker/bill.4bpp");
-static const u16 sBillSpritePalette[] = INCBIN_U16("graphics/fame_checker/bill.gbapal");
-static const u8 sDaisySpriteGfx[] = INCBIN_U8("graphics/fame_checker/daisy.4bpp");
-static const u16 sDaisySpritePalette[] = INCBIN_U16("graphics/fame_checker/daisy.gbapal");
-static const u8 sOakSpriteGfx[] = INCBIN_U8("graphics/fame_checker/prof_oak.4bpp");
-static const u16 sOakSpritePalette[] = INCBIN_U16("graphics/fame_checker/prof_oak.gbapal");
-static const u16 sUnkPalette[] = INCBIN_U16("graphics/fame_checker/unk.gbapal"); // unused?
-static const u16 sSilhouettePalette[] = INCBIN_U16("graphics/fame_checker/silhouette.gbapal");
+static const u16 sFameCheckerTilemap[] = INCBIN_U16("assets/graphics.bin", 0x5F484, 0x800);
+static const u8 sQuestionMarkSpriteGfx[] = INCBIN_U8("assets/graphics.bin", 0x5FC84, 0x100);
+static const u8 sSpinningPokeballSpriteGfx[] = INCBIN_U8("assets/graphics.bin", 0x5FD84, 0x1E0);
+static const u16 sSpinningPokeballSpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x5FF64, 0x20);
+static const u8 sSelectorCursorSpriteGfx[] = INCBIN_U8("assets/graphics.bin", 0x5FF84, 0x400);
+static const u16 sSelectorCursorSpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x60384, 0x20);
+static const u8 sFujiSpriteGfx[] = INCBIN_U8("assets/graphics.bin", 0x603A4, 0x800);
+static const u16 sFujiSpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x60BA4, 0x20);
+static const u8 sBillSpriteGfx[] = INCBIN_U8("assets/graphics.bin", 0x60BC4, 0x800);
+static const u16 sBillSpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x613C4, 0x20);
+static const u8 sDaisySpriteGfx[] = INCBIN_U8("assets/graphics.bin", 0x613E4, 0x800);
+static const u16 sDaisySpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x61BE4, 0x20);
+static const u8 sOakSpriteGfx[] = INCBIN_U8("assets/graphics.bin", 0x61C04, 0x800);
+static const u16 sOakSpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x62404, 0x20);
+static const u16 sUnkPalette[] = INCBIN_U16("assets/graphics.bin", 0x62424, 0x20); // unused?
+static const u16 sSilhouettePalette[] = INCBIN_U16("assets/graphics.bin", 0x62444, 0x20);
 
 static const u8 sTextColor_White[3]  = {0, 1, 2};
 static const u8 sTextColor_DkGrey[3] = {0, 2, 3};

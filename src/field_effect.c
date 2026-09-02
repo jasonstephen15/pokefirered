@@ -61,27 +61,27 @@ static void SpriteCB_PokecenterMonitor(struct Sprite *sprite);
 static void SpriteCB_HallOfFameMonitor(struct Sprite *sprite);
 
 // Unused
-static const u16 sNewGameOakObject_Gfx[] = INCBIN_U16("graphics/field_effects/pics/new_game_oak.4bpp");
-static const u16 sNewGameOakObject_Pal[] = INCBIN_U16("graphics/field_effects/pics/new_game_oak.gbapal");
+static const u16 sNewGameOakObject_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x66464, 0x800);
+static const u16 sNewGameOakObject_Pal[] = INCBIN_U16("assets/graphics.bin", 0x66C64, 0x20);
 
-static const u16 sPokeballGlow_Gfx[] = INCBIN_U16("graphics/field_effects/pics/pokeball_glow.4bpp");
-static const u16 sPokeballGlow_Pal[] = INCBIN_U16("graphics/field_effects/pics/pokeball_glow.gbapal");
-static const u16 sPokecenterMonitor_Gfx[] = INCBIN_U16("graphics/field_effects/pics/pokemoncenter_monitor.4bpp");
-static const u16 sHofMonitor_Pal[] = INCBIN_U16("graphics/field_effects/pics/hof_monitor.gbapal");
-static const u16 sHofMonitor_Gfx[] = INCBIN_U16("graphics/field_effects/pics/hof_monitor.4bpp");
+static const u16 sPokeballGlow_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x66C84, 0x20);
+static const u16 sPokeballGlow_Pal[] = INCBIN_U16("assets/graphics.bin", 0x66CA4, 0x20);
+static const u16 sPokecenterMonitor_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x66CC4, 0x400);
+static const u16 sHofMonitor_Pal[] = INCBIN_U16("assets/graphics.bin", 0x670C4, 0x20);
+static const u16 sHofMonitor_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x670E4, 0x200);
 
-static const u16 sFieldMoveStreaksOutdoors_Gfx[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_outdoors.4bpp");
-static const u16 sFieldMoveStreaksOutdoors_Pal[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_outdoors.gbapal");
-static const u16 sFieldMoveStreaksOutdoors_Tilemap[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_outdoors.bin");
+static const u16 sFieldMoveStreaksOutdoors_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x672E4, 0x200);
+static const u16 sFieldMoveStreaksOutdoors_Pal[] = INCBIN_U16("assets/graphics.bin", 0x674E4, 0x20);
+static const u16 sFieldMoveStreaksOutdoors_Tilemap[] = INCBIN_U16("assets/graphics.bin", 0x67504, 0x280);
 
-static const u16 sFieldMoveStreaksIndoors_Gfx[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_indoors.4bpp");
-static const u16 sFieldMoveStreaksIndoors_Pal[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_indoors.gbapal");
-static const u16 sFieldMoveStreaksIndoors_Tilemap[] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks_indoors.bin");
+static const u16 sFieldMoveStreaksIndoors_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x67784, 0x80);
+static const u16 sFieldMoveStreaksIndoors_Pal[] = INCBIN_U16("assets/graphics.bin", 0x67804, 0x20);
+static const u16 sFieldMoveStreaksIndoors_Tilemap[] = INCBIN_U16("assets/graphics.bin", 0x67824, 0x280);
 
-static const u16 sRockFragment_TopLeft[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_top_left.4bpp");
-static const u16 sRockFragment_TopRight[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_top_right.4bpp");
-static const u16 sRockFragment_BottomLeft[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_bottom_left.4bpp");
-static const u16 sRockFragment_BottomRight[] = INCBIN_U16("graphics/field_effects/pics/deoxys_rock_fragment_bottom_right.4bpp");
+static const u16 sRockFragment_TopLeft[] = INCBIN_U16("assets/graphics.bin", 0x67AA4, 0x20);
+static const u16 sRockFragment_TopRight[] = INCBIN_U16("assets/graphics.bin", 0x67AC4, 0x20);
+static const u16 sRockFragment_BottomLeft[] = INCBIN_U16("assets/graphics.bin", 0x67AE4, 0x20);
+static const u16 sRockFragment_BottomRight[] = INCBIN_U16("assets/graphics.bin", 0x67B04, 0x20);
 
 static bool8 (*const sFldEffScrcmdTable[])(const u8 **script, u32 *result) = {
     FieldEffectCmd_loadtiles,

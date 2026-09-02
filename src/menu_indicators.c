@@ -255,10 +255,10 @@ static const struct SpriteTemplate sSpriteTemplate_RedArrowCursor =
     .callback = SpriteCallback_RedArrowCursor,
 };
 
-static const u16 sRedArrowPal[] = INCBIN_U16("graphics/interface/red_arrow.gbapal");
-static const u32 sRedArrowOtherGfx[] = INCBIN_U32("graphics/interface/red_arrow_other.4bpp.lz");
-static const u32 sSelectorOutlineGfx[] = INCBIN_U32("graphics/interface/selector_outline.4bpp.lz");
-static const u32 sRedArrowGfx[] = INCBIN_U32("graphics/interface/red_arrow.4bpp.lz");
+static const u16 sRedArrowPal[] = INCBIN_U16("assets/graphics.bin", 0x24C90C, 0x20);
+static const u32 sRedArrowOtherGfx[] = INCBIN_U32("assets/graphics.bin", 0x24C92C, 0x70);
+static const u32 sSelectorOutlineGfx[] = INCBIN_U32("assets/graphics.bin", 0x24C99C, 0x40);
+static const u32 sRedArrowGfx[] = INCBIN_U32("assets/graphics.bin", 0x24C9DC, 0x44);
 
 #define tState data[0]
 #define tAnimNum data[1]

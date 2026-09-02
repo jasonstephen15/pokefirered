@@ -286,9 +286,9 @@ static const struct SpriteSheet sSpriteSheets[];
 static const struct SpritePalette sSpritePalettes[];
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[];
 
-static const u16 sPCIconOff_Gfx[] = INCBIN_U16("graphics/naming_screen/pc_icon_off.4bpp");
-static const u16 sPCIconOn_Gfx[] = INCBIN_U16("graphics/naming_screen/pc_icon_on.4bpp");
-static const u16 sRival_Gfx[] = INCBIN_U16("graphics/naming_screen/rival.4bpp");
+static const u16 sPCIconOff_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x24EC90, 0xC0);
+static const u16 sPCIconOn_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x24ED50, 0xC0);
+static const u16 sRival_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x24EE10, 0x900);
 
 static const u8 *const sTransferredToPCMessages[] =
 {

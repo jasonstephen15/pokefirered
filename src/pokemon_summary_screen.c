@@ -340,12 +340,12 @@ extern const u16 gSummaryScreen_StatusAilmentIcon_Pal[];
 extern const u32 gSummaryScreen_HpBar_Gfx[];
 extern const u32 gSummaryScreen_ExpBar_Gfx[];
 
-static const u32 sTextHeaderPalette[] = INCBIN_U32("graphics/summary_screen/text_header.gbapal");
-static const u16 sMonMarkingSpritePalette[] = INCBIN_U16("graphics/summary_screen/marking.gbapal");
-static const u32 sTextMovesPalette[] = INCBIN_U32("graphics/summary_screen/text_moves.gbapal");
-static const u16 sMoveSelectionCursorPals[] = INCBIN_U16("graphics/summary_screen/move_selection_cursor.gbapal");
-static const u32 sMoveSelectionCursorTiles_Left[] = INCBIN_U32("graphics/summary_screen/move_selection_cursor_left.4bpp.lz");
-static const u32 sMoveSelectionCursorTiles_Right[] = INCBIN_U32("graphics/summary_screen/move_selection_cursor_right.4bpp.lz");
+static const u32 sTextHeaderPalette[] = INCBIN_U32("assets/graphics.bin", 0x25EE38, 0x20);
+static const u16 sMonMarkingSpritePalette[] = INCBIN_U16("assets/graphics.bin", 0x25EE58, 0x20);
+static const u32 sTextMovesPalette[] = INCBIN_U32("assets/graphics.bin", 0x25EE78, 0x20);
+static const u16 sMoveSelectionCursorPals[] = INCBIN_U16("assets/graphics.bin", 0x25EE98, 0x20);
+static const u32 sMoveSelectionCursorTiles_Left[] = INCBIN_U32("assets/graphics.bin", 0x25EEB8, 0x12C);
+static const u32 sMoveSelectionCursorTiles_Right[] = INCBIN_U32("assets/graphics.bin", 0x25EFE4, 0x120);
 
 static const struct OamData sMoveSelectionCursorOamData =
 {
@@ -559,8 +559,8 @@ static const union AnimCmd * const sHpOrExpBarAnimTable[] =
     sHpOrExpAnim_11
 };
 
-static const u16 sPokeSummary_HpBarPalYellow[] = INCBIN_U16("graphics/summary_screen/hp_bar_yellow.gbapal");
-static const u16 sPokeSummary_HpBarPalRed[] = INCBIN_U16("graphics/summary_screen/hp_bar_red.gbapal");
+static const u16 sPokeSummary_HpBarPalYellow[] = INCBIN_U16("assets/graphics.bin", 0x25F104, 0x20);
+static const u16 sPokeSummary_HpBarPalRed[] = INCBIN_U16("assets/graphics.bin", 0x25F124, 0x20);
 
 static const struct OamData sPokerusIconObjOamData = {
     .y = 0,
@@ -588,8 +588,8 @@ static const union AnimCmd * const sPokerusIconObjAnimTable[] =
     sPokerusIconObjAnim0
 };
 
-static const u16 sPokerusIconObjPal[] = INCBIN_U16("graphics/summary_screen/pokerus_cured.gbapal");
-static const u32 sPokerusIconObjTiles[] = INCBIN_U32("graphics/summary_screen/pokerus_cured.4bpp.lz");
+static const u16 sPokerusIconObjPal[] = INCBIN_U16("assets/graphics.bin", 0x25F144, 0x20);
+static const u32 sPokerusIconObjTiles[] = INCBIN_U32("assets/graphics.bin", 0x25F164, 0x10);
 
 static const struct OamData sStarObjOamData =
 {
@@ -618,12 +618,66 @@ static const union AnimCmd * const sStarObjAnimTable[] =
     sStarObjAnim0
 };
 
-static const u16 sStarObjPal[] = INCBIN_U16( "graphics/summary_screen/shiny_star.gbapal");
-static const u32 sStarObjTiles[] = INCBIN_U32( "graphics/summary_screen/shiny_star.4bpp.lz");
-static const u32 sBgTilemap_MovesInfoPage[] = INCBIN_U32( "graphics/summary_screen/moves_info_page.bin.lz");
-static const u32 sBgTilemap_MovesPage[] = INCBIN_U32( "graphics/summary_screen/moves_page.bin.lz");
+static const u16 sStarObjPal[] = INCBIN_U16("assets/graphics.bin", 0x25F174, 0x20);
+static const u32 sStarObjTiles[] = INCBIN_U32("assets/graphics.bin", 0x25F194, 0x24);
+static const u32 sBgTilemap_MovesInfoPage[] = INCBIN_U32("assets/graphics.bin", 0x25F1B8, 0xF8);
+static const u32 sBgTilemap_MovesPage[] = INCBIN_U32("assets/graphics.bin", 0x25F2B0, 0x13C);
 
-#include "data/text/nature_names.h"
+// ===== BEGIN src/data/text/nature_names.h =====
+static const u8 sHardyNatureName[] = _("HARDY");
+static const u8 sLonelyNatureName[] = _("LONELY");
+static const u8 sBraveNatureName[] = _("BRAVE");
+static const u8 sAdamantNatureName[] = _("ADAMANT");
+static const u8 sNaughtyNatureName[] = _("NAUGHTY");
+static const u8 sBoldNatureName[] = _("BOLD");
+static const u8 sDocileNatureName[] = _("DOCILE");
+static const u8 sRelaxedNatureName[] = _("RELAXED");
+static const u8 sImpishNatureName[] = _("IMPISH");
+static const u8 sLaxNatureName[] = _("LAX");
+static const u8 sTimidNatureName[] = _("TIMID");
+static const u8 sHastyNatureName[] = _("HASTY");
+static const u8 sSeriousNatureName[] = _("SERIOUS");
+static const u8 sJollyNatureName[] = _("JOLLY");
+static const u8 sNaiveNatureName[] = _("NAIVE");
+static const u8 sModestNatureName[] = _("MODEST");
+static const u8 sMildNatureName[] = _("MILD");
+static const u8 sQuietNatureName[] = _("QUIET");
+static const u8 sBashfulNatureName[] = _("BASHFUL");
+static const u8 sRashNatureName[] = _("RASH");
+static const u8 sCalmNatureName[] = _("CALM");
+static const u8 sGentleNatureName[] = _("GENTLE");
+static const u8 sSassyNatureName[] = _("SASSY");
+static const u8 sCarefulNatureName[] = _("CAREFUL");
+static const u8 sQuirkyNatureName[] = _("QUIRKY");
+
+const u8 *const gNatureNamePointers[NUM_NATURES] = {
+    [NATURE_HARDY] = sHardyNatureName,
+    [NATURE_LONELY] = sLonelyNatureName,
+    [NATURE_BRAVE] = sBraveNatureName,
+    [NATURE_ADAMANT] = sAdamantNatureName,
+    [NATURE_NAUGHTY] = sNaughtyNatureName,
+    [NATURE_BOLD] = sBoldNatureName,
+    [NATURE_DOCILE] = sDocileNatureName,
+    [NATURE_RELAXED] = sRelaxedNatureName,
+    [NATURE_IMPISH] = sImpishNatureName,
+    [NATURE_LAX] = sLaxNatureName,
+    [NATURE_TIMID] = sTimidNatureName,
+    [NATURE_HASTY] = sHastyNatureName,
+    [NATURE_SERIOUS] = sSeriousNatureName,
+    [NATURE_JOLLY] = sJollyNatureName,
+    [NATURE_NAIVE] = sNaiveNatureName,
+    [NATURE_MODEST] = sModestNatureName,
+    [NATURE_MILD] = sMildNatureName,
+    [NATURE_QUIET] = sQuietNatureName,
+    [NATURE_BASHFUL] = sBashfulNatureName,
+    [NATURE_RASH] = sRashNatureName,
+    [NATURE_CALM] = sCalmNatureName,
+    [NATURE_GENTLE] = sGentleNatureName,
+    [NATURE_SASSY] = sSassyNatureName,
+    [NATURE_CAREFUL] = sCarefulNatureName,
+    [NATURE_QUIRKY] = sQuirkyNatureName,
+};
+// ===== END src/data/text/nature_names.h =====
 
 static const u8 *const sEggHatchTimeTexts[] = {
     gText_PokeSum_EggHatch_LongTime,

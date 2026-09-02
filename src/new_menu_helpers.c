@@ -19,10 +19,10 @@ static EWRAM_DATA u16 sTempTileDataBufferCursor = {0};
 static EWRAM_DATA void *sTempTileDataBuffers[0x20] = {NULL};
 static EWRAM_DATA u8 sStartMenuWindowId = {0};
 
-static const u16 sUnusedWindow_Gfx[] = INCBIN_U16("graphics/text_window/unused.4bpp");
-const u16 gMenuMessageWindow_Gfx[] = INCBIN_U16("graphics/text_window/menu_message.4bpp");
+static const u16 sUnusedWindow_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x24F710, 0x280);
+const u16 gMenuMessageWindow_Gfx[] = INCBIN_U16("assets/graphics.bin", 0x24F990, 0x240);
 
-const u16 gStandardMenuPalette[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
+const u16 gStandardMenuPalette[] = INCBIN_U16("assets/graphics.bin", 0x24FBD0, 0x20);
 
 static const u8 sTextSpeedFrameDelays[] =
 {

@@ -246,61 +246,61 @@ static void SpriteCB_NidorinoAttack(struct Sprite *sprite);
 extern const u32 gMultiBootProgram_PokemonColosseum_Start[];
 extern const u32 gMultiBootProgram_PokemonColosseum_End[];
 
-static const u16 sCopyright_Pal[] = INCBIN_U16("graphics/intro/copyright.gbapal");
-static const u8 sCopyright_Gfx[]  = INCBIN_U8( "graphics/intro/copyright.4bpp.lz");
-static const u8 sCopyright_Map[]  = INCBIN_U8( "graphics/intro/copyright.bin.lz");
+static const u16 sCopyright_Pal[] = INCBIN_U16("assets/graphics.bin", 0x220BF0, 0x20);
+static const u8 sCopyright_Gfx[]  = INCBIN_U8("assets/graphics.bin", 0x220C10, 0x264);
+static const u8 sCopyright_Map[]  = INCBIN_U8("assets/graphics.bin", 0x220E74, 0x14C);
 
 // Game Freak
-static const u16 sGameFreakBg_Pal[]   = INCBIN_U16("graphics/intro/game_freak/bg.gbapal");
-static const u8 sGameFreakBg_Gfx[]    = INCBIN_U8( "graphics/intro/game_freak/bg.4bpp.lz");
-static const u8 sGameFreakBg_Map[]    = INCBIN_U8( "graphics/intro/game_freak/bg.bin.lz");
-static const u16 sGameFreakLogo_Pal[] = INCBIN_U16("graphics/intro/game_freak/logo.gbapal");
-static const u8 sGameFreakText_Gfx[]  = INCBIN_U8( "graphics/intro/game_freak/game_freak.4bpp.lz");
-static const u32 sGameFreakLogo_Gfx[] = INCBIN_U32("graphics/intro/game_freak/logo.4bpp.lz");
-static const u16 sStar_Pal[]          = INCBIN_U16("graphics/intro/game_freak/star.gbapal");
-static const u32 sStar_Gfx[]          = INCBIN_U32("graphics/intro/game_freak/star.4bpp.lz");
-static const u16 sSparkles_Pal[]      = INCBIN_U16("graphics/intro/game_freak/sparkles.gbapal");
-static const u32 sSparklesSmall_Gfx[] = INCBIN_U32("graphics/intro/game_freak/sparkles_small.4bpp.lz");
-static const u32 sSparklesBig_Gfx[]   = INCBIN_U32("graphics/intro/game_freak/sparkles_big.4bpp.lz");
-static const u32 sPresents_Gfx[]      = INCBIN_U32("graphics/intro/game_freak/presents.4bpp.lz");
+static const u16 sGameFreakBg_Pal[]   = INCBIN_U16("assets/graphics.bin", 0x220FC0, 0x20);
+static const u8 sGameFreakBg_Gfx[]    = INCBIN_U8("assets/graphics.bin", 0x220FE0, 0x18);
+static const u8 sGameFreakBg_Map[]    = INCBIN_U8("assets/graphics.bin", 0x220FF8, 0xA4);
+static const u16 sGameFreakLogo_Pal[] = INCBIN_U16("assets/graphics.bin", 0x22109C, 0x20);
+static const u8 sGameFreakText_Gfx[]  = INCBIN_U8("assets/graphics.bin", 0x2210BC, 0x1CC);
+static const u32 sGameFreakLogo_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x221288, 0x14C);
+static const u16 sStar_Pal[]          = INCBIN_U16("assets/graphics.bin", 0x2213D4, 0x20);
+static const u32 sStar_Gfx[]          = INCBIN_U32("assets/graphics.bin", 0x2213F4, 0x58);
+static const u16 sSparkles_Pal[]      = INCBIN_U16("assets/graphics.bin", 0x22144C, 0x20);
+static const u32 sSparklesSmall_Gfx[] = INCBIN_U32("assets/graphics.bin", 0x22146C, 0x50);
+static const u32 sSparklesBig_Gfx[]   = INCBIN_U32("assets/graphics.bin", 0x2214BC, 0x1A8);
+static const u32 sPresents_Gfx[]      = INCBIN_U32("assets/graphics.bin", 0x221664, 0x60);
 
 // Scene 1 (Grass close up)
-static const u16 sScene1_Grass_Pal[] = INCBIN_U16("graphics/intro/scene_1/grass.gbapal");
-static const u8 sScene1_Grass_Gfx[]  = INCBIN_U8( "graphics/intro/scene_1/grass.4bpp.lz");
-static const u8 sScene1_Grass_Map[]  = INCBIN_U8( "graphics/intro/scene_1/grass.bin.lz");
-static const u16 sScene1_Bg_Pal[]    = INCBIN_U16("graphics/intro/scene_1/bg.gbapal");
-static const u8 sScene1_Bg_Gfx[]     = INCBIN_U8( "graphics/intro/scene_1/bg.4bpp.lz");
-static const u8 sScene1_Bg_Map[]     = INCBIN_U8( "graphics/intro/scene_1/bg.bin.lz");
+static const u16 sScene1_Grass_Pal[] = INCBIN_U16("assets/graphics.bin", 0x2216C4, 0x20);
+static const u8 sScene1_Grass_Gfx[]  = INCBIN_U8("assets/graphics.bin", 0x2216E4, 0x1294);
+static const u8 sScene1_Grass_Map[]  = INCBIN_U8("assets/graphics.bin", 0x222978, 0x8E4);
+static const u16 sScene1_Bg_Pal[]    = INCBIN_U16("assets/graphics.bin", 0x22325C, 0x20);
+static const u8 sScene1_Bg_Gfx[]     = INCBIN_U8("assets/graphics.bin", 0x22327C, 0x690);
+static const u8 sScene1_Bg_Map[]     = INCBIN_U8("assets/graphics.bin", 0x22390C, 0x438);
 
 // Scenes 2 and 3 (Gengar and Nidorino)
-static const u16 sScene2_Bg_Pal[]            = INCBIN_U16("graphics/intro/scene_2/bg.gbapal");
-static const u8 sScene2_Bg_Gfx[]             = INCBIN_U8( "graphics/intro/scene_2/bg.4bpp.lz");
-static const u8 sScene2_Bg_Map[]             = INCBIN_U8( "graphics/intro/scene_2/bg.bin.lz");
-static const u16 sScene2_Plants_Pal[]        = INCBIN_U16("graphics/intro/scene_2/plants.gbapal"); // Unused
-static const u8 sScene2_Plants_Gfx[]         = INCBIN_U8( "graphics/intro/scene_2/plants.4bpp.lz");
-static const u8 sScene2_Plants_Map[]         = INCBIN_U8( "graphics/intro/scene_2/plants.bin.lz");
-static const u16 sGengar_Pal[]               = INCBIN_U16("graphics/intro/gengar.gbapal"); // Used by multiple scenes
-static const u8 sScene2_GengarClose_Gfx[]    = INCBIN_U8( "graphics/intro/scene_2/gengar_close.4bpp.lz");
-static const u8 sScene2_GengarClose_Map[]    = INCBIN_U8( "graphics/intro/scene_2/gengar_close.bin.lz");
-static const u16 sScene2_NidorinoClose_Pal[] = INCBIN_U16("graphics/intro/scene_2/nidorino_close.gbapal");
-static const u8 sScene2_NidorinoClose_Gfx[]  = INCBIN_U8( "graphics/intro/scene_2/nidorino_close.4bpp.lz");
-static const u8 sScene2_NidorinoClose_Map[]  = INCBIN_U8( "graphics/intro/scene_2/nidorino_close.bin.lz");
-static const u16 sScene3_Bg_Pal[]            = INCBIN_U16("graphics/intro/scene_3/bg.gbapal");
-static const u8 sScene3_Bg_Gfx[]             = INCBIN_U8( "graphics/intro/scene_3/bg.4bpp.lz");
-static const u8 sScene3_Bg_Map[]             = INCBIN_U8( "graphics/intro/scene_3/bg.bin.lz");
-static const u8 sScene3_GengarAnim_Gfx[]     = INCBIN_U8( "graphics/intro/scene_3/gengar_anim.4bpp.lz");
-static const u8 sScene3_GengarAnim_Map[]     = INCBIN_U8( "graphics/intro/scene_3/gengar_anim.bin.lz");
-static const u32 sScene2_Gengar_Gfx[]        = INCBIN_U32("graphics/intro/scene_2/gengar.4bpp.lz");
-static const u16 sNidorino_Pal[]             = INCBIN_U16("graphics/intro/nidorino.gbapal"); // Used by multiple scenes
-static const u32 sScene2_Nidorino_Gfx[]      = INCBIN_U32("graphics/intro/scene_2/nidorino.4bpp.lz");
-static const u16 sScene3_Grass_Pal[]         = INCBIN_U16("graphics/intro/scene_3/grass.gbapal");
-static const u32 sScene3_Grass_Gfx[]         = INCBIN_U32("graphics/intro/scene_3/grass.4bpp.lz");
-static const u32 sScene3_GengarStatic_Gfx[]  = INCBIN_U32("graphics/intro/scene_3/gengar_static.4bpp.lz");
-static const u32 sScene3_Nidorino_Gfx[]      = INCBIN_U32("graphics/intro/scene_3/nidorino.4bpp.lz");
-static const u16 sScene3_Swipe_Pal[]         = INCBIN_U16("graphics/intro/scene_3/swipe.gbapal");
-static const u16 sScene3_RecoilDust_Pal[]    = INCBIN_U16("graphics/intro/scene_3/recoil_dust.gbapal");
-static const u32 sScene3_Swipe_Gfx[]         = INCBIN_U32("graphics/intro/scene_3/swipe.4bpp.lz");
-static const u32 sScene3_RecoilDust_Gfx[]    = INCBIN_U32("graphics/intro/scene_3/recoil_dust.4bpp.lz");
+static const u16 sScene2_Bg_Pal[]            = INCBIN_U16("assets/graphics.bin", 0x223D44, 0x60);
+static const u8 sScene2_Bg_Gfx[]             = INCBIN_U8("assets/graphics.bin", 0x223DA4, 0x47C);
+static const u8 sScene2_Bg_Map[]             = INCBIN_U8("assets/graphics.bin", 0x224220, 0x278);
+static const u16 sScene2_Plants_Pal[]        = INCBIN_U16("assets/graphics.bin", 0x224498, 0x20); // Unused
+static const u8 sScene2_Plants_Gfx[]         = INCBIN_U8("assets/graphics.bin", 0x2244B8, 0x1B4);
+static const u8 sScene2_Plants_Map[]         = INCBIN_U8("assets/graphics.bin", 0x22466C, 0xC8);
+static const u16 sGengar_Pal[]               = INCBIN_U16("assets/graphics.bin", 0x224734, 0x20); // Used by multiple scenes
+static const u8 sScene2_GengarClose_Gfx[]    = INCBIN_U8("assets/graphics.bin", 0x224754, 0x688);
+static const u8 sScene2_GengarClose_Map[]    = INCBIN_U8("assets/graphics.bin", 0x224DDC, 0x1E8);
+static const u16 sScene2_NidorinoClose_Pal[] = INCBIN_U16("assets/graphics.bin", 0x224FC4, 0x20);
+static const u8 sScene2_NidorinoClose_Gfx[]  = INCBIN_U8("assets/graphics.bin", 0x224FE4, 0xB7C);
+static const u8 sScene2_NidorinoClose_Map[]  = INCBIN_U8("assets/graphics.bin", 0x225B60, 0x260);
+static const u16 sScene3_Bg_Pal[]            = INCBIN_U16("assets/graphics.bin", 0x225DC0, 0x40);
+static const u8 sScene3_Bg_Gfx[]             = INCBIN_U8("assets/graphics.bin", 0x225E00, 0x5E0);
+static const u8 sScene3_Bg_Map[]             = INCBIN_U8("assets/graphics.bin", 0x2263E0, 0x14C);
+static const u8 sScene3_GengarAnim_Gfx[]     = INCBIN_U8("assets/graphics.bin", 0x22652C, 0x11FC);
+static const u8 sScene3_GengarAnim_Map[]     = INCBIN_U8("assets/graphics.bin", 0x227728, 0x4D4);
+static const u32 sScene2_Gengar_Gfx[]        = INCBIN_U32("assets/graphics.bin", 0x227BFC, 0x440);
+static const u16 sNidorino_Pal[]             = INCBIN_U16("assets/graphics.bin", 0x22803C, 0x20); // Used by multiple scenes
+static const u32 sScene2_Nidorino_Gfx[]      = INCBIN_U32("assets/graphics.bin", 0x22805C, 0x350);
+static const u16 sScene3_Grass_Pal[]         = INCBIN_U16("assets/graphics.bin", 0x2283AC, 0x20);
+static const u32 sScene3_Grass_Gfx[]         = INCBIN_U32("assets/graphics.bin", 0x2283CC, 0x2E4);
+static const u32 sScene3_GengarStatic_Gfx[]  = INCBIN_U32("assets/graphics.bin", 0x2286B0, 0x6C4);
+static const u32 sScene3_Nidorino_Gfx[]      = INCBIN_U32("assets/graphics.bin", 0x228D74, 0x1450);
+static const u16 sScene3_Swipe_Pal[]         = INCBIN_U16("assets/graphics.bin", 0x22A1C4, 0x20);
+static const u16 sScene3_RecoilDust_Pal[]    = INCBIN_U16("assets/graphics.bin", 0x22A1E4, 0x20);
+static const u32 sScene3_Swipe_Gfx[]         = INCBIN_U32("assets/graphics.bin", 0x22A204, 0x26C);
+static const u32 sScene3_RecoilDust_Gfx[]    = INCBIN_U32("assets/graphics.bin", 0x22A470, 0xA0);
 
 static const struct BgTemplate sBgTemplates_GameFreakScene[] = {
     {

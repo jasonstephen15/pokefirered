@@ -31,8 +31,8 @@ struct RfuUnusedQueue
 
 static EWRAM_DATA u8 sWirelessStatusIndicatorSpriteId = 0;
 
-static const u16 sWirelessLinkIconPalette[] = INCBIN_U16("graphics/link/wireless_icon.gbapal");
-static const u32 sWirelessLinkIconPic[] = INCBIN_U32("graphics/link/wireless_icon.4bpp.lz");
+static const u16 sWirelessLinkIconPalette[] = INCBIN_U16("assets/graphics.bin", 0x22D274, 0x20);
+static const u32 sWirelessLinkIconPic[] = INCBIN_U32("assets/graphics.bin", 0x22D294, 0x124);
 
 // Most of the below two tables won't make sense with ASCII encoding.
 #if REVISION >= 0xA

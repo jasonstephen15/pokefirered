@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 #include <cstdio>
+#include <cstdlib>
 #include <cstdarg>
 #include <stdexcept>
 #include <string>
@@ -351,14 +352,49 @@ void CFile::TryConvertIncbin()
 
         m_pos++;
 
+        // Optional ", offset, length" selects a slice of the file.
+        long sliceOffset = -1, sliceLength = -1;
+        SkipWhitespace();
+        if (m_buffer[m_pos] == ',')
+        {
+            long savedPos = m_pos;
+            m_pos++;
+            SkipWhitespace();
+            if (m_buffer[m_pos] >= '0' && m_buffer[m_pos] <= '9')
+            {
+                char* end;
+                sliceOffset = std::strtol(&m_buffer[m_pos], &end, 0);
+                m_pos = end - m_buffer;
+                SkipWhitespace();
+                if (m_buffer[m_pos] != ',')
+                    RaiseError("expected ',' before slice length");
+                m_pos++;
+                SkipWhitespace();
+                sliceLength = std::strtol(&m_buffer[m_pos], &end, 0);
+                m_pos = end - m_buffer;
+            }
+            else
+            {
+                m_pos = savedPos;
+            }
+        }
+
         int fileSize;
         std::unique_ptr<unsigned char[]> buffer = ReadWholeFile(path, fileSize);
+
+        int offset = 0;
+        if (sliceOffset >= 0)
+        {
+            if (sliceOffset + sliceLength > fileSize)
+                RaiseError("Slice %ld+%ld exceeds file size %d.\n", sliceOffset, sliceLength, fileSize);
+            offset = sliceOffset;
+            fileSize = sliceLength;
+        }
 
         if ((fileSize % size) != 0)
             RaiseError("Size %d doesn't evenly divide file size %d.\n", size, fileSize);
 
         int count = fileSize / size;
-        int offset = 0;
 
         for (int i = 0; i < count; i++)
         {
